@@ -76,7 +76,22 @@
       margin-top:10px;
     }
   }
+
+  .colsas{
   
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 2em;
+  }
+  .icon{
+    height:2em;
+  }
+  .col-sm-4.col-md-3.items{
+    display: block;
+    text-align: center;
+  }
   .footer-clean .copyright {
     margin-top:14px;
     margin-bottom:0;
@@ -84,10 +99,16 @@
     opacity:0.6;
   }
   .col-sm-4.col-md-3.item{
-    background-color: violet;
+    background-color: rgb(255, 255, 255);
+  }
+ 
+ 
+  h3{
+    color: rgb(247, 158, 75);
   }
 
-  h3{
-    color: blueviolet;
-  }
+.address {
+  color: greenyellow;
+  font-size: 80%;
+}
   /* Credit to https://epicbootstrap.com/snippets/footer-with-columns */
