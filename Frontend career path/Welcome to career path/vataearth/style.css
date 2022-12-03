@@ -1,0 +1,40 @@
+@font-face {
+    src: url("gd.ttf");
+    font-family: Corleone;
+}
+
+body {
+    color:rgb(255, 255, 255);
+    background-size: cover;
+    text-align: center;
+    font-family: Corleone;
+    margin:0;
+    
+}
+
+#main{
+    background-image: url("tommy.gif");
+    height: 50em;
+    background-size:cover;
+    padding-top: 1em ;
+}
+.bt {
+    
+    border: 1px solid white;
+    background-color: white;
+    padding: 4px 8px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+.underline {
+    color: rgb(235, 165, 81);
+    text-shadow: 5px 5px 3px black;
+}
+.fog{
+    text-shadow: 5px 5px 3px black;
+}
+
+#mainlogo{
+    width: 3em;
+}
