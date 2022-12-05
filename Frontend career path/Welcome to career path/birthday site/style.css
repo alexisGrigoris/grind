@@ -1,0 +1,41 @@
+body{
+    text-align: center;
+    font-family: 'Happy Monkey', cursive;
+    background-color: black;
+    color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#jadon{
+    border-radius: 50%;
+    width: 15em;
+    border: 0.5em solid yellow;
+}
+
+h4, h2{
+    background-color: rgb(68, 68, 68);
+    
+}
+
+#age{
+    background: #EFB0C9;
+    width: 8em;
+}
+
+#date{
+    background: #EFB0C9;
+    width: 6em;
+}
+.fog{
+    text-shadow: 1px 1px 5px rgb(255, 255, 255);
+}
+
+#header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
