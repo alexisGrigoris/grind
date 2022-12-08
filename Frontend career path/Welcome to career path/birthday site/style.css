@@ -1,11 +1,12 @@
 body{
     text-align: center;
     font-family: 'Happy Monkey', cursive;
-    background-color: black;
+    background: linear-gradient(rgb(116, 211, 255),rgb(10, 41, 126));
     color: yellow;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 #jadon{
@@ -14,22 +15,22 @@ body{
     border: 0.5em solid yellow;
 }
 
-h4, h2{
-    background-color: rgb(68, 68, 68);
-    
-}
+
 
 #age{
-    background: #EFB0C9;
+    background: #747474;
     width: 8em;
 }
 
 #date{
-    background: #EFB0C9;
+    background: #747474;
     width: 6em;
 }
 .fog{
     text-shadow: 1px 1px 5px rgb(255, 255, 255);
+    padding: 5px   10px;
+    border-radius: 1em;
+    margin:0.5em;
 }
 
 #header{
@@ -38,4 +39,67 @@ h4, h2{
     align-items: center;
     justify-content: center;
 
+}
+
+.prize{
+  border:0.5em solid yellow;
+  border-radius: 1em;  
+}
+
+.gs-h2{
+    margin: 0em 0em 0em 0em;
+}
+
+.gs-h3{
+    margin: 0.1em 0em 1em 0em;
+
+}
+h6{
+    font-size: 2em;
+    margin-top: 0;
+    color: orange;
+}
+a{
+    color: orange;
+}
+
+.gs-img{
+    background-image: url("rev.jpg");
+    height: 50em;
+    width: 50em;
+    border: 1px solid yellow;
+    background-size: cover;
+}
+
+#celebrating:hover{
+    background-image: url("https://i2-prod.dailystar.co.uk/incoming/article24284254.ece/ALTERNATES/s615b/2_GettyImages-1232870295.jpg");
+    
+    width: 70em;
+    height: 70em;
+}
+
+
+#erl{
+    height:30em;
+}
+.gs-h22{
+    margin: 3em;
+}
+
+#fans:hover{
+
+    background-image: url("https://media.gettyimages.com/id/169470478/photo/borussia-dortmund-fans-ahead-of-the-uefa-champions-league-final-match-between-borussia.jpg?s=612x612&w=gi&k=20&c=wO9ekHBVSQRV0i-g9NjO_xF4GcsixKPmLnAHDnLS91s=");
+}
+
+#erl:hover{
+    background-image: url("https://talksport.com/wp-content/uploads/sites/5/2021/02/NINTCHDBPICT000636875928-e1613742905906.jpg?strip=all&w=960&quality=40") ;
+}
+
+#reus:hover{
+
+    background-image: url("https://bvbwatch.com/wp-content/uploads/2020/09/Reus-says-Sancho-will-stay.jpg");
+}
+
+a:hover{
+    font-size: 1.5em;
 }
