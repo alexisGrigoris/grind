@@ -83,3 +83,47 @@ img{
     height: 10em;
     
 }
+
+
+
+.vataman{
+    width: 9em;
+    border-radius: 0.2em;
+
+}
+.card{
+    margin-top: 5em;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 20em;
+    background: #FAEDCD;
+    color: #2b2839;
+    border-bottom: 6px solid #e2d7a1;
+    
+    
+}
+
+
+#bot{
+    
+    width: 66%;
+    background-color:rgb(202, 231, 224) ;
+    margin-left: 15%;
+    height:20em;
+}
+
+.border{
+    border: blue 1px}
+
+#fix{
+    width: 66%;
+    background-color:rgb(202, 231, 224) ;
+    margin-left: 15%;
+    height: 7.5em;
+}
+
+.text{
+    width: 10em;
+}
