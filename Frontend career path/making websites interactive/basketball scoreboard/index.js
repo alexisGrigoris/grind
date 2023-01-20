@@ -3,6 +3,9 @@ let guest = 0
 document.getElementById("hp").textContent = home
 document.getElementById("gp").textContent = guest
 
+
+
+
 function add1() {
     home += 1;
     hp.textContent = home;
@@ -35,5 +38,12 @@ function gadd3() {
 }
 
 function reset(){
-
+    let historyy = "Previous game score was :" + " " + home + " - " + guest;
+    document.getElementById("history").textContent = historyy
+    guest = 0;
+    gp.textContent = 0;
+    home = 0;
+    hp.textContent = 0;
+    
+    
 }
