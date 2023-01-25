@@ -1,18 +1,40 @@
-let firstCard = 3
-let secondCard = 11
-let cards = [firstCard, secondCard]
-let sum = firstCard + secondCard 
+let cards = []
+let sum = 0
 let hasBlackJack = false
-let isAlive = true
-// 1. Declare a variable called message and assign its value to an empty string
+let isAlive = false
 let message = ""
 let messageEl = document.getElementById("message-el")
-// let sumEl = document.getElementById("sum-el")
-// queryselector is similar to getElementByIdS
-let sumEl = document.querySelector("#sum-el")
+let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 
+let player = {
+    name : "Sir/Madam",
+    chips : 1000
+}
+
+let playerDetails = document.getElementById("player-el")
+playerDetails.textContent = player.name + " your balance is $" + player.chips
+
+
+
+function getRandomCard() {
+    let rn = Math.floor(Math.random() * 13) + 1
+        if (rn >10 ) {
+            return 10
+        } 
+        else{
+            return rn 
+        }
+}
+
 function startGame(){
+        isAlive = true
+       // Generate two random numbes
+       let firstCard = getRandomCard()
+       let secondCard = getRandomCard()
+       cards = [firstCard, secondCard]
+       sum = firstCard + secondCard
+    // Re-assign the cards and sum variables so that the game can start
     renderGame();
 }
 
@@ -44,16 +66,17 @@ function renderGame(){
 }
 
 function newCard() {
+    if ( isAlive === true && hasBlackJack === false) {
     console.log("You are drawing a new card")
 
-    let ncard = 7
+    let ncard =  getRandomCard() 
 
     sum += ncard
 
     cards.push(ncard)
 
     renderGame();
-    
+    }
 
 }
 
