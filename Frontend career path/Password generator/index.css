@@ -1,0 +1,61 @@
+body {
+    margin-left: 2%;
+    background-color: #1F2937;
+    color: #D5D4D8;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top:5%;
+}
+
+#green{
+    color:#4ADF86;
+    height: 0.5em;
+    padding-bottom: 0.2em;
+}
+
+#white {
+    color: white;
+    height: 0.5em;
+}
+
+button{
+    background-color:#4ADF86;
+    color: white;
+    border: none;
+    border-radius: 0.4em;
+    padding: 0.8em;
+    margin:2em 0 2em 0;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#line{
+    background-color: #2F3E53;
+    height: 0.1em;
+    width: 30em;
+}
+
+.passfields{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:30em;
+ 
+}
+.field{
+    background-color: #273549;
+    width: 14em;
+    height: 2.5em;
+    border-radius: 0.4em;
+    margin-top: 4em;
+    color: #4ADF86;
+    text-align: center;
+    
+       
+}
+
+#copy2{
+    background-color: blue;
+    
+}
+
