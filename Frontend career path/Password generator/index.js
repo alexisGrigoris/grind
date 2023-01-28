@@ -10,7 +10,9 @@ function passgen() {
     let newpass = characters[rn];
     field1.textContent +=  newpass
     }
-    refresh.textContent = "Refresh page for new passwords"
+    document.getElementById('buitton').disabled = 'disabled';
+    
+    refresh.textContent = "Refresh page here for new passwords"
 }
 
 function passgen2() {
@@ -18,10 +20,19 @@ function passgen2() {
     let rn = Math.floor(Math.random() * characters.length);
     let newpass = characters[rn];
     field2.innerHTML += newpass 
-
+    
     }
-    field2.innerHTML += ("<button onclick='copy()' id='copy2'> 1 </button>")
+    
 }
 
 let refresh = document.getElementById("refresh")
 
+
+  const copyContent = async () => {
+    try {
+      await navigator.clipboard.writeText(field1);
+      console.log('Content copied to clipboard');
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  }
