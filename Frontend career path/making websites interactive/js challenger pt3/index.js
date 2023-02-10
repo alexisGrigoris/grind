@@ -20,14 +20,6 @@ function generateSentence(desc, arr) {
 generateSentence("bvb",["reus", "brandt","sancho","haaland"])
 
 
-
-
-
-
-
-
-
-
 // SETTING THE STAGE
 const player = "Per"
 const opponent = "Nick"
@@ -95,3 +87,38 @@ let data = [
         score: 41
     }
 ]
+
+
+// Create a function that renders the three team images
+// Use a for loop, template strings (``), plus equals (+=)
+// .innerHTML to solve the challenge.
+
+const container = document.getElementById("container")
+const imgs = [
+    "images/hip1.jpg",
+    "images/hip2.jpg",
+    "images/logo.jpg"
+]
+
+function renimg() {
+    let imgsDOM = ""
+    for (let i = 0; i < imgs.length; i++) {
+        imgsDOM += `<img class="team-img" src="${imgs[i]}">`
+    }
+    container.innerHTML = imgsDOM
+    
+    
+}
+
+renimg()
+
+
+// Challenge:
+// Round the price in the button down to two decimal places.
+// Don't know which method to use? Google it!
+
+const totalPrice = "420.69235632455"
+const btn2 = document.getElementById("purchase-btn")
+const tPriceFixed =  Number(totalPrice).toFixed(2);
+btn2.textContent = `Buy ${ tPriceFixed }EUR`
+
