@@ -1,0 +1,47 @@
+/* 
+Challenge:
+1. Create a "header" selector.
+2. Give it its background color.
+3. What CSS property do you need to use to remove
+   the annoying white space at the top? Give this 
+   property a value of 45px top and bottom.
+3. Create selectors for the h1 and h3 elements.
+4. Assign the correct margins, size & colors to h1
+   and h3.
+At the end of the challenge, the h1 and h3 will 
+still be up right up against the left-hand edge of 
+the browser. That is fine for now.   
+*/
+ 
+ 
+
+ 
+ 
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body{
+    color: #2b283A;
+    font-family: 'Roboto', sans-serif;   
+    font-size: 16px;
+    font-weight: 400 500;
+    margin: 0;
+}
+
+header{
+    background-color: #5f29a3;
+    padding: 45px 0 45px 0;
+    
+}
+
+h3{
+    color: #d0aaff;
+    font-size: 20px;
+    margin:0;
+}
+
+h1{
+    color: whitesmoke;
+    font-size: 36px;
+    margin:0;
+}
