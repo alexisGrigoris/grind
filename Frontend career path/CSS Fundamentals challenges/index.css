@@ -4,31 +4,48 @@
 body{
     text-align: center;
     font-family: 'Roboto', sans-serif;
-
+    font-size: 21px;
+    font-weight: 300;
 }
 
 .container {
-    width: 570px;
+    width: 700px;
     margin: 0 auto;
+    border: 1px solid rgb(8, 8, 6);
 }
 
 h1{
     font-weight: 300;
-
-
+    font-size: 80px;
 }
 
 h2{
 
     font-weight: 300;
+    font-size: 60px;
+    margin-top: 300px;
+
 }
 .bold{
     font-size: 25px;
-    font-family: 'Roboto', sans-serif;
     font-weight: 900;
 }
 
 .under{
     margin-top: -25px;
     font-size: 14px;
+}
+
+.big{
+    font-size: 45px;
+    font-weight: 900;
+    margin-top:-30px;
+}
+
+img{
+    border-radius:50em;
+    
+    width: 150px;
+    height: 150px;
+
 }
