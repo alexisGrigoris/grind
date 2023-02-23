@@ -1,51 +1,93 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');
 
-
 body{
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 21px;
     font-weight: 300;
+    display: block;
+    margin:0;
+    color:#252525
 }
 
 .container {
     width: 700px;
-    margin: 0 auto;
-    border: 1px solid rgb(8, 8, 6);
+    margin: 0 auto;  
 }
 
 h1{
     font-weight: 300;
-    font-size: 80px;
+    font-size: 60px;
+    margin-top:0;
 }
 
 h2{
-
     font-weight: 300;
-    font-size: 60px;
-    margin-top: 300px;
-
+    font-size: 46px;
+    margin-top:-0;   
+    border-top:1px solid #c4c4c4;
+    border-bottom:1px solid #c4c4c4;
+    padding: 20px 0;
+    margin-bottom: 20px;
 }
+
 .bold{
     font-size: 25px;
     font-weight: 900;
+    margin-bottom: 0;
 }
 
 .under{
-    margin-top: -25px;
+    display: block; 
     font-size: 14px;
+    margin-top: 0;
 }
 
 .big{
     font-size: 45px;
     font-weight: 900;
-    margin-top:-30px;
+    display: block;
 }
 
 img{
-    border-radius:50em;
-    
-    width: 150px;
-    height: 150px;
+    border-radius:6em;
+    width: 200px;
+    height: 200px;
+}
 
+a{
+    color: #99d930;
+    font-weight: 900;
+}
+
+a:hover{
+    color: #131313;
+}
+
+section, header{
+    padding:100px 0;
+}
+
+.dark{
+    background-color: #252525;
+    color: #fff;
+}
+
+p{
+    margin-bottom: 0;
+}
+
+.btn{
+    color: #252525;
+    background-color: #99d930;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 25px;
+    margin: 2em auto 0 auto;
+    border-radius: 3px;
+}
+
+.btn:hover{
+    background-color: #252525;
+    color:#fff;
 }
