@@ -43,7 +43,9 @@ function render(newPosts) {
                     </div>
                 </header>`
     for (let i = 0; i < posts.length; i++) {
+     
         feed += `
+        
         <section class="post-info">
             <div class="container">
                 <img src="${posts[i].avatar}" class="postAvatar" alt="User's Avatar">
@@ -63,7 +65,7 @@ function render(newPosts) {
             <div class="container">
             <button> <img src="images/heart.png"   class="btn-img" id="like-btn"> </button>
             <button> <img src="images/comment.png" class="btn-img"> </button>
-            <button> <img src="images/share.png" class="btn-img"> </button>
+            <button> <img src="images/share.png" class="btn-img" > </button>
                 
             <p id="likes"> ${posts[i].likes} likes</p>
             <p id="username"> ${posts[i].username} </p>
@@ -73,19 +75,19 @@ function render(newPosts) {
         `
         
         
+        
     }
     body.innerHTML = feed
+   
     const likeBtn = document.getElementById("like-btn")
     let likesno = document.getElementById("likes")
-    likeBtn.addEventListener("click", function(){
-        
-        likesno.innerHTML = `<p> ${posts[i].likes} + likessd </p>`
-
+    likeBtn.addEventListener("click",function(){
+        likesno.innerHTML = `${(posts[0].likes+1)} likes`
     })
-    
-    
+   
 
 }
+
 
 render(posts)
 
