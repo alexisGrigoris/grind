@@ -1,36 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&family=Spectral:wght@600&display=swap');
+
 
 
 html, body {
     margin: 0;
     padding: 0;
     background-color: black;
+    font-family:'Source Sans Pro', sans-serif;
 }
+
 
 h1{
     font-family: 'Spectral', serif;
     display: inline-block;
-    margin-top: 1em;
     margin-left: 1em;
 }
 
 .vata, .postAvatar{
     border-radius:8em;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     display: inline-block;
 }
 
 #name{
-    display: inline-block;
+   
+margin-top:-4em;
+margin-left: 5em;
+font-weight:600;
 }
 
 #location{
     color:black;
+    margin-left: 5em;
+    margin-top: -1em;
 }
 
 .vata{
-    margin: -5em 0 1em 38em;
+    margin: -4.5em 0 1em 38em;
 }
 
 .postAvatar{
@@ -44,7 +53,48 @@ h1{
 }
 
 
-.post-info{
-    height: 300px;
-    background-color: blue;
+
+
+.imgPost{
+    width: 700px;
+}
+
+button{
+    width: 35px;
+    height: 35px;
+    margin:1.5em 1em 0 1em;
+    background-color: #ffffff;
+    border: none;
+    
+}
+
+.btn-img:hover{
+    opacity:50%;
+}
+
+.btn-img{
+    width: 35px;
+    height: 35px;
+}
+
+#likes{
+    font-weight:600;
+    margin-left:1.2em;
+    margin-top:0.6em;
+}
+
+#username{
+  
+    font-weight: 700; 
+    margin-left: 1.2em;
+
+}
+
+#caption, #username{
+    display: inline-block;
+    margin-top: -1em;
+}
+
+#caption{
+    margin-left: 0.2em;
 }
