@@ -1,30 +1,91 @@
 const posts = [
     {
-        name: "Vincent van Gogh",
-        username: "vincey1853",
+        name: "Thomas Shelby ",
+        username: "TommyOBE",
         location: "Zundert, Netherlands",
-        avatar: "images/avatar-vangogh.jpg",
-        post: "images/post-vangogh.jpg",
-        comment: "just took a few mushrooms lol",
-        likes: 21
+        avatar: "images/tomAv.jpg",
+        post: "images/tomPost.jpeg",
+        comment: "You can change what you do, but you can't change what you want.",
+        likes: 2131
     },
     {
-        name: "Gustave Courbet",
-        username: "gus1819",
-        location: "Ornans, France",
-        avatar: "images/avatar-courbet.jpg",
-        post: "images/post-courbet.jpg",
+        name: "Arthur Shelby",
+        username: "Peaky Blinder",
+        location: "The Garrison Pub, Birmingham",
+        avatar: "images/arthurAv.png",
+        post: "images/arthurPost.jpg",
         comment: "i'm feelin a bit stressed tbh",
-        likes: 4
+        likes: 432
     },
         {
-        name: "Joseph Ducreux",
-        username: "jd1735",
-        location: "Paris, France",
-        avatar: "images/avatar-ducreux.jpg",
-        post: "images/post-ducreux.jpg",
+        name: "John Shelby",
+        username: "JonnyBoy",
+        location: "The Garrison Pub, Birmingham",
+        avatar: "images/johnAv.png",
+        post: "images/johnPost.jpeg",
         comment: "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
-        likes: 152
+        likes: 1523
     }
 ]
+
+const body = document.getElementById("feed")
+
+
+
+
+
+function render(newPosts) {
+
+    let feed = `<header>
+                    <div class="container">
+                        <h1> Instagram </h1>
+                        <img src="images/vataman2.jpg" class="vata" alt="A picture of the creator of this project">
+                    </div>
+                </header>`
+    for (let i = 0; i < posts.length; i++) {
+        feed += `
+        <section class="post-info">
+            <div class="container">
+                <img src="${posts[i].avatar}" class="postAvatar" alt="User's Avatar">
+                <p id="name"> ${posts[i].name}</p>
+                <p id="location"> ${posts[i].location}</p>
+                
+            </div>
+        </section>
+
+        <section class="post-img">
+            <div class="container">
+                <img src="${posts[i].post}" class="imgPost">
+            </div>
+        </section>
+
+        <section class="post-details">
+            <div class="container">
+            <button> <img src="images/heart.png"   class="btn-img" id="like-btn"> </button>
+            <button> <img src="images/comment.png" class="btn-img"> </button>
+            <button> <img src="images/share.png" class="btn-img"> </button>
+                
+            <p id="likes"> ${posts[i].likes} likes</p>
+            <p id="username"> ${posts[i].username} </p>
+            <p id="caption"> ${posts[i].comment}  </p>
+            </div>
+        </section>
+        `
+        
+        
+    }
+    body.innerHTML = feed
+    const likeBtn = document.getElementById("like-btn")
+    let likesno = document.getElementById("likes")
+    likeBtn.addEventListener("click", function(){
+        
+        likesno.innerHTML = `<p> ${posts[i].likes} + likessd </p>`
+
+    })
+    
+    
+
+}
+
+render(posts)
 
