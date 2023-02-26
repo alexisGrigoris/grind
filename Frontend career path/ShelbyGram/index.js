@@ -2,7 +2,7 @@ const posts = [
     {
         name: "Thomas Shelby ",
         username: "TommyOBE",
-        location: "Zundert, Netherlands",
+        location: "Small Heath, Birmingham",
         avatar: "images/tomAv.jpg",
         post: "images/tomPost.jpeg",
         comment: "You can change what you do, but you can't change what you want.",
@@ -14,7 +14,7 @@ const posts = [
         location: "The Garrison Pub, Birmingham",
         avatar: "images/arthurAv.png",
         post: "images/arthurPost.jpg",
-        comment: "i'm feelin a bit stressed tbh",
+        comment: "Fast women and slow horses will ruin your life",
         likes: 432
     },
         {
@@ -23,7 +23,7 @@ const posts = [
         location: "The Garrison Pub, Birmingham",
         avatar: "images/johnAv.png",
         post: "images/johnPost.jpeg",
-        comment: "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
+        comment: "The force will be with you. Always",
         likes: 1523
     }
 ]
@@ -63,7 +63,7 @@ function render(newPosts) {
 
         <section class="post-details">
             <div class="container">
-            <button> <img src="images/heart.png"   class="btn-img" id="like-btn"> </button>
+            <button> <img src="images/heart.png"  class="btn-img like-btn"> </button>
             <button> <img src="images/comment.png" class="btn-img"> </button>
             <button> <img src="images/share.png" class="btn-img" > </button>
                 
@@ -79,11 +79,7 @@ function render(newPosts) {
     }
     body.innerHTML = feed
    
-    const likeBtn = document.getElementById("like-btn")
-    let likesno = document.getElementById("likes")
-    likeBtn.addEventListener("click",function(){
-        likesno.innerHTML = `${(posts[0].likes+1)} likes`
-    })
+
    
 
 }
@@ -91,3 +87,9 @@ function render(newPosts) {
 
 render(posts)
 
+let likeBtn = document.querySelector(".like-btn")
+let likesno = document.getElementById("likes")
+likeBtn.addEventListener("click",function(){
+    likesno.innerHTML = `${(posts[0].likes+1)} likes`;
+    likeBtn.src="images/liked.png";
+})
