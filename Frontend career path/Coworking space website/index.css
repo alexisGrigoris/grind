@@ -43,13 +43,41 @@ h1{
 
 .caption{
     margin:0 25px;
+    display:flex;
+    justify-content: space-evenly;
+    gap:20px;
 }
 
 .item-img{
     width:100%;
+    display: block;
 }
 
 .align-right{
     margin-left:auto;
 
+}
+
+.img-banner {
+        background-color: #cd6858;
+        color: whitesmoke;
+        padding: 10px;
+        position: absolute;
+        top:0;
+        left: 0;
+    }
+    
+    
+.item{
+    position: relative;
+}
+
+button {
+    border: none;
+    background-color: #cd6858;
+    color: whitesmoke;
+    padding: 10px 15px;
+    font-weight: 700;
+    cursor: pointer; 
+   
 }
