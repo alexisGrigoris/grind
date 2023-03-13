@@ -3,6 +3,8 @@ const closeButton = document.getElementById("modal-close-btn")
 const form = document.getElementById("consent-form")
 const text = document.getElementById("modal-text")
 const acceptBtn = document.getElementById("accept-btn")
+const decBtn = document.getElementById("decline-btn")
+const btnsDiv = document.getElementById("modal-choice-btns")
 
 setTimeout (function(){
     cookie.style.display = 'inline'
@@ -35,21 +37,13 @@ form.addEventListener("submit",function(e){
             <img src="images/bob.gif">
         </div>
     ` 
+    closeButton.disabled = false
     }, 3000)
-    
+
 })
 
-/*   
-Challenge: 
-1. Make it so that 1.5 seconds after seeing the 
-   "Making the sale..." message, the modal is 
-   cleared of its content and the following 
-   string of HTML is displayed instead.
-   
-   `<h2>Thanks you sucker! </h2>
-    <p>We just sold the rights to your eternal soul.</p>
-    <div class="idiot-gif">
-        <img src="images/pirate.gif">
-    </div>
-    ` 
-*/  
+decBtn.addEventListener("mouseover", function(){
+    btnsDiv.classList.toggle('reverse')
+})
+
+
