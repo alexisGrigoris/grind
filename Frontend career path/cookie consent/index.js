@@ -3,6 +3,8 @@ const closeButton = document.getElementById("modal-close-btn")
 const form = document.getElementById("consent-form")
 const text = document.getElementById("modal-text")
 const acceptBtn = document.getElementById("accept-btn")
+const decBtn = document.getElementById("decline-btn")
+const btnsDiv = document.getElementById("modal-choice-btns")
 
 setTimeout (function(){
     cookie.style.display = 'inline'
@@ -35,7 +37,8 @@ form.addEventListener("submit",function(e){
             <img src="images/bob.gif">
         </div>
     ` 
+    closeButton.disabled = false
     }, 3000)
-    
+
 })
 
