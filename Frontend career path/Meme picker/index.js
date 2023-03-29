@@ -22,13 +22,30 @@ document.getElementById(e.target.id).parentElement.classList.add('highlight')
 
 function getMatchingCatsArray() {
 
-    const gifOnly = checkbox.checked
+    if(document.querySelector('input[type="radio"]:checked')){    
+        const selectedEmotion = document.querySelector('input[type=radio]:checked').value;
+        const gifOnly = checkbox.checked
+        
+        const matchingCatsArray = catsData.filter(function(cat){
+            if (gifOnly) { // if gifOnly alone equals to if gifOnly === true
+                return cat.emotionTags.includes(selectedEmotion) && cat.isGif
+            }else{
+                return cat.emotionTags.includes(selectedEmotion)
+            }
+            /*
+Challenge:
+1. Change the .filter() method's function so it returns an 
+   array that only has GIFs if the 'GIFs only' option is 
+   checked. If the 'GIFs only' option is not checked, it
+   should return an array of all matches as it does now.
+*/ 
 
-if(document.querySelector('input[type="radio"]:checked')){    
-    const val = document.querySelector('input[type=radio]:checked').value;
-    test.textContent = val + gifOnly
+
+
+        })
+        
+
     }
-    
 
 }
 
