@@ -4,7 +4,7 @@ const tweetInput = document.getElementById('tweet-input')
 const tweetBtn = document.getElementById('tweet-btn')
 const test = document.getElementById('feed')
 
-tweetBtn.addEventListener('click', getFeedHtml)
+tweetBtn.addEventListener('click', textareaValue)
 
 function textareaValue() {
     test.textContent = tweetInput.value
@@ -75,3 +75,5 @@ Challenge:
 
 
 }
+
+getFeedHtml()
