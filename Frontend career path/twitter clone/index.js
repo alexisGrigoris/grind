@@ -56,16 +56,6 @@ Challenge:
 2. If it does, log out the uuid for that tweet.
 */
 
-tweetsData.forEach(function(tweet){
-    if(tweet.replies != ""){
-        return tweet.uuid
-    }
-}
-
-)
-
-
-
 
 function getFeedHtml(){
 
@@ -80,14 +70,44 @@ function getFeedHtml(){
         if(tweet.isRetweeted){
             retweetIconClass="retweeted"
         }
-        /*
-        Challenge:
-        1. Use an if statement to set the value of 
-           'likeIconClass' to the string 'liked' 
-           if the tweet has been liked. 
-        2. In the like icon tag, add 'likeIconClass' 
-           to the list of classes.
-        */            
+     
+        let repliesHtml = ""
+
+        if(tweet.replies.length > 0){
+            tweet.replies.forEach(function(reply){
+                repliesHtml += `
+                <div class="tweet-reply">
+                <div class="tweet-inner">
+                    <img src="${reply.profilePic}" class="profile-pic">
+                        <div>
+                            <p class="handle">${reply.handle}</p>
+                            <p class="tweet-text">${reply.tweetText}</p>
+                        </div>
+                    </div>
+            </div>`
+            }
+            )
+
+            /*
+Challenge:
+1. If a tweet has replies, iterate through the replies
+   and wrap each one in the HTML template provided below. 
+   Make sure to replace words in UPPERCASE with data from 
+   the tweet. On each iteration, add this HTML to repliesHtml.
+   
+<div class="tweet-reply">
+    <div class="tweet-inner">
+        <img src="PROFILE PIC" class="profile-pic">
+            <div>
+                <p class="handle">HANDLE</p>
+                <p class="tweet-text">TWEET TEXT</p>
+            </div>
+        </div>
+</div>
+*/
+        }
+
+
     feedHtml += `<div class="tweet">
         <div class="tweet-inner">
             <img src="${tweet.profilePic}" class="profile-pic">
@@ -109,13 +129,22 @@ function getFeedHtml(){
                         <i class="fa-solid fa-retweet ${retweetIconClass}" data-retweet="${tweet.uuid}">
                         </i>
  
-                            ${tweet.retweets}
-                    </span>
-                </div>   
-            </div>            
-        </div>
-    </div>`
+                        ${tweet.retweets}
+                        </span>
+                    </div>   
+                </div>            
+            </div>
+            <div class="hidden" id="replies-${tweet.uuid}">
+                ${repliesHtml}
+            </div>   
+        </div>`
    
+    /*
+Challenge:
+2. Place repliesHtml in its parent div remembering 
+   to update that divs id.
+*/
+
 })
 return feedHtml
 

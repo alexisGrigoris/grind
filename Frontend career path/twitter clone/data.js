@@ -14,19 +14,19 @@ export const tweetsData = [
     },    
     {
         handle: `@KINGJULIAN ✅`,
-        profilePic: `images/musk.png`,
+        profilePic: `images/julian.jpeg`,
         likes: 6500,
         retweets: 234,
         tweetText: `I need volunteers for a one-way mission to Mars 🪐. No experience necessary🚀`,
         replies: [
                   {
                 handle: `@JadonSanchoooooo ✅`,
-                profilePic: `images/tcruise.png`,
+                profilePic: `images/jadon.jpeg`,
                 tweetText: `Yes! Sign me up! 😎🛩`,
             },
                   {
                 handle: `@VikingErling ✅`,
-                profilePic: `images/chucknorris.jpeg`,
+                profilePic: `images/erling.jpeg`,
                 tweetText: `I went last year😴`,
             },
         ],
@@ -36,19 +36,19 @@ export const tweetsData = [
     },
         {
         handle: `@MR11`,
-        profilePic: `images/flower.png`,
+        profilePic: `images/marco.jpeg`,
         likes: 10,
         retweets: 3,
         tweetText: `Are you a coder if you only know HTML?`,
         replies: [
             {
                 handle: `@SuperMARIO ☣️`,
-                profilePic: `images/overflow.png`,
+                profilePic: `images/mario.jpeg`,
                 tweetText: `No. Onviosuly not. Go get a job in McDonald's.`,
             },
             {
                 handle: `@Aubatman`,
-                profilePic: `images/love.png`,
+                profilePic: `images/auba.jpeg`,
                 tweetText: `You are wonderful just as you are! ❤️`,
             },
         ],
