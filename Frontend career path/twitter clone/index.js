@@ -50,6 +50,22 @@ function handleRetweetClick(tweetId){
 
     }
 
+    /*
+Challenge:
+1. Use an if statement to check if a tweet has replies.
+2. If it does, log out the uuid for that tweet.
+*/
+
+tweetsData.forEach(function(tweet){
+    if(tweet.replies != ""){
+        return tweet.uuid
+    }
+}
+
+)
+
+
+
 
 function getFeedHtml(){
 

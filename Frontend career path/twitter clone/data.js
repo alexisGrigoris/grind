@@ -1,7 +1,7 @@
 
 export const tweetsData = [   
     {
-        handle: `@TrollBot66756542 💎`,
+        handle: `@HasbiTheGOAT 💎`,
         profilePic: `images/hasbi.jpeg`,
         likes: 27,
         retweets: 10,
@@ -13,19 +13,19 @@ export const tweetsData = [
         uuid: '4b161eee-c0f5-4545-9c4b-8562944223ee',
     },    
     {
-        handle: `@Elon ✅`,
+        handle: `@KINGJULIAN ✅`,
         profilePic: `images/musk.png`,
         likes: 6500,
         retweets: 234,
         tweetText: `I need volunteers for a one-way mission to Mars 🪐. No experience necessary🚀`,
         replies: [
                   {
-                handle: `@TomCruise ✅`,
+                handle: `@JadonSanchoooooo ✅`,
                 profilePic: `images/tcruise.png`,
                 tweetText: `Yes! Sign me up! 😎🛩`,
             },
                   {
-                handle: `@ChuckNorris ✅`,
+                handle: `@VikingErling ✅`,
                 profilePic: `images/chucknorris.jpeg`,
                 tweetText: `I went last year😴`,
             },
@@ -35,19 +35,19 @@ export const tweetsData = [
         uuid: '3c23454ee-c0f5-9g9g-9c4b-77835tgs2',
     },
         {
-        handle: `@NoobCoder12`,
+        handle: `@MR11`,
         profilePic: `images/flower.png`,
         likes: 10,
         retweets: 3,
         tweetText: `Are you a coder if you only know HTML?`,
         replies: [
             {
-                handle: `@StackOverflower ☣️`,
+                handle: `@SuperMARIO ☣️`,
                 profilePic: `images/overflow.png`,
                 tweetText: `No. Onviosuly not. Go get a job in McDonald's.`,
             },
             {
-                handle: `@YummyCoder64`,
+                handle: `@Aubatman`,
                 profilePic: `images/love.png`,
                 tweetText: `You are wonderful just as you are! ❤️`,
             },
