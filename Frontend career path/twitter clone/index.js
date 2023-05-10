@@ -1,6 +1,5 @@
  import { tweetsData } from './data.js'
 const tweetInput = document.getElementById('tweet-input')
-const tweetBtn = document.getElementById('tweet-btn')
 const feed = document.getElementById('feed')
 
 tweetBtn.addEventListener('click', textareaValue)
@@ -15,6 +14,12 @@ document.addEventListener('click', function(e){
     }
     else if (e.target.dataset.retweet){
         handleRetweetClick(e.target.dataset.retweet)
+    }
+    else if (e.target.dataset.reply){
+        handleReplyClick(e.target.dataset.reply)
+    }
+    else if (e.target.id === 'tweet-btn'){
+        handleTweetBtnClick()
     }
 })
 
@@ -50,12 +55,13 @@ function handleRetweetClick(tweetId){
 
     }
 
-    /*
-Challenge:
-1. Use an if statement to check if a tweet has replies.
-2. If it does, log out the uuid for that tweet.
-*/
+function handleReplyClick(replyId){
+    document.getElementById(`replies-${replyId}`).classList.toggle('hidden')
+    }
 
+function handleTweetBtnClick(){
+    console.log(tweetInput.value)
+}
 
 function getFeedHtml(){
 
@@ -88,23 +94,7 @@ function getFeedHtml(){
             }
             )
 
-            /*
-Challenge:
-1. If a tweet has replies, iterate through the replies
-   and wrap each one in the HTML template provided below. 
-   Make sure to replace words in UPPERCASE with data from 
-   the tweet. On each iteration, add this HTML to repliesHtml.
-   
-<div class="tweet-reply">
-    <div class="tweet-inner">
-        <img src="PROFILE PIC" class="profile-pic">
-            <div>
-                <p class="handle">HANDLE</p>
-                <p class="tweet-text">TWEET TEXT</p>
-            </div>
-        </div>
-</div>
-*/
+
         }
 
 
@@ -128,7 +118,7 @@ Challenge:
                     <span class="tweet-detail">
                         <i class="fa-solid fa-retweet ${retweetIconClass}" data-retweet="${tweet.uuid}">
                         </i>
- 
+                    
                         ${tweet.retweets}
                         </span>
                     </div>   
@@ -139,11 +129,7 @@ Challenge:
             </div>   
         </div>`
    
-    /*
-Challenge:
-2. Place repliesHtml in its parent div remembering 
-   to update that divs id.
-*/
+
 
 })
 return feedHtml
