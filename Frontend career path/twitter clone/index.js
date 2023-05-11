@@ -1,7 +1,11 @@
 import { tweetsData } from './data.js'
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
-const tweetInput = document.getElementById('tweet-input')
+/*
+Challenge:
+3. We could improve index.js by moving one line
+   of code to a better position. Find it and move it!
+*/
 
 document.addEventListener('click', function(e){
     if(e.target.dataset.like){
@@ -53,27 +57,29 @@ function handleReplyClick(replyId){
 }
 
 function handleTweetBtnClick(){
-    tweetsData.push({
-        handle: `@hASBULLA 💎`,
-        profilePic: `images/hasbi.jpeg`,
-        likes: 0,
-        retweets: 0,
-        tweetText: tweetInput.value,
-        replies: [],
-        isLiked: false,
-        isRetweeted: false,
-        uuid: uuidv4,
-    })
+    const tweetInput = document.getElementById('tweet-input')
+
 /*
 Challenge:
-2. When the Tweet button is clicked, log out an object
-   for a new tweet. Make sure you include the text of 
-   the tweet (how can you get that?) and a unique 
-   identifier using uuidjs.
-   
-   The handle @Scrimba (or whatever you prefer) and 
-   the profile pic scrimbalogo.png can be hard-coded.
-*/ 
+1. No empty tweets!
+2. Clear the textarea after tweeting!
+*/
+    if(tweetInput.value){
+        tweetsData.unshift({
+            handle: `@Scrimba`,
+            profilePic: `images/hasbi.jpeg`,
+            likes: 0,
+            retweets: 0,
+            tweetText: tweetInput.value,
+            replies: [],
+            isLiked: false,
+            isRetweeted: false,
+            uuid: uuidv4()
+        })
+    render()
+    tweetInput.value = ''
+    }
+
 }
 
 function getFeedHtml(){
