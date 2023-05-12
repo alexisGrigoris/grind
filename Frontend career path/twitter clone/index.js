@@ -8,7 +8,10 @@ Challenge:
 */
 
 document.addEventListener('click', function(e){
-    if(e.target.dataset.like){
+    if(e.target.dataset.delete) {
+        handleDeleteClick(e.target.dataset.delete)
+    }
+    else if(e.target.dataset.like){
        handleLikeClick(e.target.dataset.like) 
     }
     else if(e.target.dataset.retweet){
@@ -52,6 +55,10 @@ function handleRetweetClick(tweetId){
     render() 
 }
 
+function handleDeleteClick(){
+    document.getElementById(`tweet`).classList.toggle('hidden')
+    
+}
 function handleReplyClick(replyId){
     document.getElementById(`replies-${replyId}`).classList.toggle('hidden')
 }
@@ -110,7 +117,7 @@ function getFeedHtml(){
             <div>
                 <p class="handle">${reply.handle}</p>
                 <p class="tweet-text">${reply.tweetText}</p>
-            </div>
+                </div>
         </div>
 </div>
 `
@@ -119,15 +126,16 @@ function getFeedHtml(){
         
           
         feedHtml += `
-<div class="tweet">
+<div class="tweet" id="tweet">
     <div class="tweet-inner">
         <img src="${tweet.profilePic}" class="profile-pic">
         <div>
             <p class="handle">${tweet.handle}</p>
             <p class="tweet-text">${tweet.tweetText}</p>
             <div class="tweet-details">
+                
                 <span class="tweet-detail">
-                    <i class="fa-regular fa-comment-dots"
+                    <i class="fa-regular fa-comment-dots "
                     data-reply="${tweet.uuid}"
                     ></i>
                     ${tweet.replies.length}
@@ -143,6 +151,9 @@ function getFeedHtml(){
                     data-retweet="${tweet.uuid}"
                     ></i>
                     ${tweet.retweets}
+                </span>
+                <span class="delete-tweet">
+                <i class="fa-sharp fa-solid fa-trash" data-delete=${tweet.uuid}></i>
                 </span>
             </div>   
         </div>            
