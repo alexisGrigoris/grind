@@ -1,11 +1,6 @@
 import { tweetsData } from './data.js'
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
-/*
-Challenge:
-3. We could improve index.js by moving one line
-   of code to a better position. Find it and move it!
-*/
 
 document.addEventListener('click', function(e){
     if(e.target.dataset.like){
@@ -22,9 +17,6 @@ document.addEventListener('click', function(e){
     }
     else if(e.target.id === 'tweet-btn'){
         handleTweetBtnClick()
-    }
-    else if(e.target.id === 'reply-btn'){
-        handleReplyBtnClick()
     }
 })
  
@@ -59,10 +51,8 @@ function handleRetweetClick(tweetId){
 }
 
 function handleDeleteClick(deleteId){
-    document.getElementById(`tweet-${deleteId}`).remove()
+ document.getElementById(`tweet-${deleteId}`).remove()
 
-
-    
 }
 function handleReplyClick(replyId){
     document.getElementById(`replies-${replyId}`).classList.toggle('hidden')
@@ -71,11 +61,7 @@ function handleReplyClick(replyId){
 function handleTweetBtnClick(){
     const tweetInput = document.getElementById('tweet-input')
 
-/*
-Challenge:
-1. No empty tweets!
-2. Clear the textarea after tweeting!
-*/
+
     if(tweetInput.value){
         tweetsData.unshift({
             handle: `@Scrimba`,
@@ -96,26 +82,9 @@ Challenge:
 
 }
 
-function handleReplyBtnClick() {
-    const replyInput = document.getElementById('reply-input')
-    if(replyInput.value){
-        tweetsData.unshift({
-            handle: `@Scrimba`,
-            profilePic: `images/hasbi.jpeg`,
-            likes: 0,
-            retweets: 0,
-            tweetText: tweetInput.value,
-            replies: [],
-            isLiked: false,
-            isRetweeted: false,
-            uuid: uuidv4()
-        })
-    render()
-    replyInput.value = ''
-    }
 
     
-}
+
 
 function getFeedHtml(){
     let feedHtml = ``
@@ -188,10 +157,7 @@ function getFeedHtml(){
             </div>   
         </div>            
     </div>
-    		<div class="tweet-reply-area">
-            <textarea placeholder="Leave a reply" id="reply-input"></textarea>
-            <button id="reply-btn"> Reply </button>
-		</div>
+
     <div class="hidden" id="replies-${tweet.uuid}">
         ${repliesHtml}
     </div>   
