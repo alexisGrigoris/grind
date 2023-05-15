@@ -1,3 +1,50 @@
 body {
     margin: 0;
 } 
+
+header{
+    background-color: blue;
+position: absolute;
+width: 600px;
+height: 167px;
+left: 0px;
+top: 0px;
+}
+
+img{
+    position: absolute;
+width: 600px;
+height: 167px;
+left: 0px;
+top: 0px;
+}
+
+h1{
+position: absolute;
+width: 289.28px;
+height: 24px;
+left: 46.07px;
+top: 46px;
+font-family: 'Smythe';
+font-style: normal;
+font-weight: 400;
+font-size: 39px;
+line-height: 24px;
+text-align: center;
+color: #FFFFFF;
+
+}
+
+h2{
+position: absolute;
+width: 2895.46px;
+height: 8px;
+left: 46.07px;
+top: 89px;
+font-family: 'Smythe';
+font-style: normal;
+font-weight: 400;
+font-size: 22.4216px;
+line-height: 14px;
+color: #FFFFFF;
+}
