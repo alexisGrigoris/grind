@@ -8,11 +8,11 @@ Challenge:
 */
 
 document.addEventListener('click', function(e){
-    if(e.target.dataset.delete) {
-        handleDeleteClick(e.target.dataset.delete)
-    }
-    else if(e.target.dataset.like){
+    if(e.target.dataset.like){
        handleLikeClick(e.target.dataset.like) 
+    }
+    else if(e.target.dataset.delete){
+        handleDeleteClick(e.target.dataset.delete)
     }
     else if(e.target.dataset.retweet){
         handleRetweetClick(e.target.dataset.retweet)
@@ -22,6 +22,9 @@ document.addEventListener('click', function(e){
     }
     else if(e.target.id === 'tweet-btn'){
         handleTweetBtnClick()
+    }
+    else if(e.target.id === 'reply-btn'){
+        handleReplyBtnClick()
     }
 })
  
@@ -55,8 +58,10 @@ function handleRetweetClick(tweetId){
     render() 
 }
 
-function handleDeleteClick(){
-    document.getElementById(`tweet`).classList.toggle('hidden')
+function handleDeleteClick(deleteId){
+    document.getElementById(`tweet-${deleteId}`).remove()
+
+
     
 }
 function handleReplyClick(replyId){
@@ -87,6 +92,29 @@ Challenge:
     tweetInput.value = ''
     }
 
+   
+
+}
+
+function handleReplyBtnClick() {
+    const replyInput = document.getElementById('reply-input')
+    if(replyInput.value){
+        tweetsData.unshift({
+            handle: `@Scrimba`,
+            profilePic: `images/hasbi.jpeg`,
+            likes: 0,
+            retweets: 0,
+            tweetText: tweetInput.value,
+            replies: [],
+            isLiked: false,
+            isRetweeted: false,
+            uuid: uuidv4()
+        })
+    render()
+    replyInput.value = ''
+    }
+
+    
 }
 
 function getFeedHtml(){
@@ -126,7 +154,7 @@ function getFeedHtml(){
         
           
         feedHtml += `
-<div class="tweet" id="tweet">
+<div class="tweet" id="tweet-${tweet.uuid}">
     <div class="tweet-inner">
         <img src="${tweet.profilePic}" class="profile-pic">
         <div>
@@ -152,12 +180,18 @@ function getFeedHtml(){
                     ></i>
                     ${tweet.retweets}
                 </span>
-                <span class="delete-tweet">
-                <i class="fa-sharp fa-solid fa-trash" data-delete=${tweet.uuid}></i>
+                <span class="delete-tweet tweet-detail ">
+                <i class="fa-solid fa-trash"
+                data-delete="${tweet.uuid}" 
+                ></i>
                 </span>
             </div>   
         </div>            
     </div>
+    		<div class="tweet-reply-area">
+            <textarea placeholder="Leave a reply" id="reply-input"></textarea>
+            <button id="reply-btn"> Reply </button>
+		</div>
     <div class="hidden" id="replies-${tweet.uuid}">
         ${repliesHtml}
     </div>   

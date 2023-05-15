@@ -48,6 +48,11 @@ header{
     gap: 10px;
 }
 
+.tweet-reply-area{
+    margin:1em 0 0 3.5em;
+    width: 80%;
+}
+
 
 
 /* textareas + btn */
@@ -66,7 +71,6 @@ textarea{
 button{
     background-color: #f8e90f;
     border: none;
-    color: white;
     padding: 10px 19px;
     border-radius: 20px;
     width: 100%; 
