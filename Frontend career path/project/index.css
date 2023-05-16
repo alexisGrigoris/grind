@@ -1,50 +1,59 @@
 body {
     margin: 0;
+    text-align: center;
 } 
 
 header{
-    background-color: blue;
-position: absolute;
-width: 600px;
-height: 167px;
-left: 0px;
-top: 0px;
+margin: 0 auto;
+display: block;
 }
 
 img{
-    position: absolute;
-width: 600px;
-height: 167px;
-left: 0px;
-top: 0px;
+width: 100%;
+margin: 0 auto;
+display: inline-block;
 }
 
-h1{
-position: absolute;
-width: 289.28px;
-height: 24px;
-left: 46.07px;
-top: 46px;
-font-family: 'Smythe';
-font-style: normal;
-font-weight: 400;
-font-size: 39px;
-line-height: 24px;
-text-align: center;
-color: #FFFFFF;
+main{
+    
+width: 60%;
+height: 1161px;
+background: #FFFFFF;
+margin: 0 auto;
+}
+
+.items{
+    margin-top:3em;
+    height: 150em;
+    background-color: rgb(255, 255, 255);
+}
+
+.item{
+    border-bottom:1px solid black;
+    margin :1em;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    
+}
+
+.item-emoji{
+    margin-left:1em;
+    display:inline-block;
+    font-size: 3em;
+}
+
+.item-ing{
 
 }
 
-h2{
-position: absolute;
-width: 2895.46px;
-height: 8px;
-left: 46.07px;
-top: 89px;
-font-family: 'Smythe';
-font-style: normal;
-font-weight: 400;
-font-size: 22.4216px;
-line-height: 14px;
-color: #FFFFFF;
+.item-name{
+    
+}
+
+.item-price{
+
+}
+
+#add-item{
+
 }

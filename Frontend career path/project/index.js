@@ -6,15 +6,17 @@ function displayItems(){
 
         items += `
         <div class="item"> 
-        ${item.name}
-        ${item.emoji}
-        ${item.ingredients}
-        ${item.emoji}
-        <h1>212 </h1>
+        
+        <p class="item-name">${item.name} </p>
+        <p class="item-emoji">${item.emoji}</p>
+        <p class="item-ing">${item.ingredients}</p>
+        <p class="item-price">${item.price} </p>
+        
+        <button id="add-item"> + </button>
 
 
 
-        <div>
+        </div>
         `
 
     })
