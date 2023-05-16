@@ -21,8 +21,3 @@ export const menuArray = [
         id: 2
     }
 ]
-
-function displayItems(){
-    let items = ""
-    
-}

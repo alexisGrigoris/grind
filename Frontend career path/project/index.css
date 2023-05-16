@@ -15,7 +15,6 @@ display: inline-block;
 }
 
 main{
-    
 width: 60%;
 height: 1161px;
 background: #FFFFFF;
@@ -29,31 +28,46 @@ margin: 0 auto;
 }
 
 .item{
-    border-bottom:1px solid black;
+    display:flex;
+    border-bottom:1px solid #D2D2D2;
     margin :1em;
     background-color: rgb(255, 255, 255);
-    text-align: left;
     
 }
 
 .item-emoji{
-    margin-left:1em;
     display:inline-block;
-    font-size: 3em;
+    font-size: 4em;
 }
 
+.item-prop{
+    width: 33%;
+}
 .item-ing{
+    color:#8B8B8B;
+    text-align: left;
 
 }
 
 .item-name{
-    
+margin-top: 3em;
+text-align: left;
+font-size: 22px;
+font-weight: bold;
+
 }
 
 .item-price{
+    text-align: left;
+    font-weight: bold;
 
 }
 
 #add-item{
-
+margin-top: 5em;
+width: 50px;
+height: 50px;
+border-radius:100%;
+border: 1.5px solid #DEDEDE;;
+background-color: #FFFFFF;
 }
