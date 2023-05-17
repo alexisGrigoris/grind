@@ -21,13 +21,13 @@ background: #FFFFFF;
 margin: 0 auto;
 }
 
-.items{
-    margin-top:3em;
-    height: 150em;
+.item-prop{
     background-color: rgb(255, 255, 255);
+    width:33%;
 }
 
 .item{
+    gap:1em;
     width:auto;
     display:flex;
     border-bottom:1px solid #D2D2D2;
@@ -41,13 +41,13 @@ margin: 0 auto;
 
 .item-emoji{
     font-size: 4em;
+
 }
 
 
 .item-ing{
     color:#8B8B8B;
-    text-align: left;
-
+    align-self:center
 }
 
 .item-name{
