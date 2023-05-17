@@ -28,21 +28,22 @@ margin: 0 auto;
 }
 
 .item{
+    width:auto;
     display:flex;
     border-bottom:1px solid #D2D2D2;
+    flex-direction: row;
+    justify-content: space-between;
     margin :1em;
     background-color: rgb(255, 255, 255);
+    align-items:start;
     
 }
 
 .item-emoji{
-    display:inline-block;
     font-size: 4em;
 }
 
-.item-prop{
-    width: 33%;
-}
+
 .item-ing{
     color:#8B8B8B;
     text-align: left;
