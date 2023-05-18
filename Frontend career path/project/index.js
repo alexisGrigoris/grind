@@ -1,5 +1,8 @@
 import { menuArray } from './data.js'
 
+const addItemBtn = document.getElementById('add-item')
+
+
 function displayItems(){
     let items = ""
     menuArray.forEach(function(item){
@@ -28,6 +31,8 @@ function displayItems(){
 
     
 }
+
+
 
 function render(){
     document.getElementById('itemsFeed').innerHTML = displayItems()
