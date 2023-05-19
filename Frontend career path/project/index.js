@@ -1,6 +1,6 @@
 import { menuArray } from './data.js'
 
-const addItemBtn = document.getElementById('add-item')
+
 
 
 function displayItems(){
@@ -33,6 +33,7 @@ function displayItems(){
 }
 
 
+const addItemBtn = document.getElementById('add-item')
 
 function render(){
     document.getElementById('itemsFeed').innerHTML = displayItems()
