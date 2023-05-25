@@ -13,14 +13,15 @@ document.addEventListener('click', function(e){
 
 function handleAddBtn(itemId) {
     const test = document.getElementById('test')
-    const targetItemObj = menuArray.filter(function(item){
+    const targetItemObject = menuArray.filter(function(item){
         return item.id === itemId
+
     })[0]
-    if (targetItemObj){
-        test.innerHTML = `<h1> works </h1>`
+    if (!targetItemObject.price){
+        test.innerHTML = `<h1>${itemId}</h1>`
     }
     else{
-        test.innerHTML = `<h2> ${itemId} </h2>`
+        test.innerHTML = `<h2> ${itemId} xaxa </h2>`
     }
 }
 
