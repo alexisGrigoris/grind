@@ -2,6 +2,27 @@ import { menuArray } from './data.js'
 
 
 
+document.addEventListener('click', function(e){
+    if(e.target.dataset.addbtn) {
+        handleAddBtn(e.target.dataset.addbtn)
+    }
+    else{
+
+    }
+})
+
+function handleAddBtn(itemId) {
+    const test = document.getElementById('test')
+    const targetItemObj = menuArray.filter(function(item){
+        return item.id === itemId
+    })[0]
+    if (targetItemObj){
+        test.innerHTML = `<h1> works </h1>`
+    }
+    else{
+        test.innerHTML = `<h2> ${itemId} </h2>`
+    }
+}
 
 function displayItems(){
     let items = ""
@@ -19,7 +40,7 @@ function displayItems(){
        </div>
        
        <div class="item-prop">
-        <button id="add-item"> + </button>
+        <button id="add-item" data-addbtn=${item.id}> + </button>
         </div>
 
 
@@ -31,9 +52,6 @@ function displayItems(){
 
     
 }
-
-
-const addItemBtn = document.getElementById('add-item')
 
 function render(){
     document.getElementById('itemsFeed').innerHTML = displayItems()
