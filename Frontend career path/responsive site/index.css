@@ -100,19 +100,30 @@ header,
 }
 
 /*
- Challenge:
-  Use a percentage value to create flexible containers 
-  that resize according to their parent’s width
+  Challenge:
+   1. Google "how to set the maximum width of an element"  
+   2. Apply a maximum width of 800px to .container
 */
 
 .container {
     width: 90%;
+    max-width: 800px;
+    border: 2px solid tomato;
     margin: 0 auto;
 }
 
+/*
+  Challenge:
+   1. Apply a maximum width to .main-image
+   2. Make the image slightly narrower than 
+     its container and center it on the page 
+*/
+
 .main-image {
     width: 100%;
-    margin-bottom: 32px;
+    display: block;
+    max-width: 640px;
+    margin: 0 auto 32px;
 }
 
 .section-two-image-container {
@@ -121,7 +132,7 @@ header,
 }
 
 .feature-image {
-    width:49%;
+    width: 48.8%;
     border-radius: 4.6px;
 }
 
