@@ -14,7 +14,7 @@ document.addEventListener('click', function(event) {
         addItemToOrder(event.target.dataset.add)
     } else if (event.target.dataset.remove) {
         removeItemFromOrder(event.target.dataset.remove)
-        console.log(event.target.dataset.remove)
+        //console.log(event.target.dataset.remove)
     } else if (event.target.id === "complete-order") {
         displayPaymentModal()
     } else if (event.target.id === "pay-btn") {
@@ -46,7 +46,7 @@ function addItemToOrder(itemId) {
     if (!order.includes(targetItemObj)) {
         order.push(targetItemObj)
         totalPrice += targetItemObj.price
-        //console.log('totalprice is: ' + totalPrice)
+        console.log('totalprice is: ' + totalPrice)
         renderOrderSection()
         renderOrderItems()
     }
@@ -56,35 +56,36 @@ function removeItemFromOrder(itemId) {
     
     
     
-    //itemId = Number(itemId)
+    itemId = Number(itemId)
     
     //console.log(typeof(itemId))
     
-
+/*
     let targetItemObj = menuArray.filter(function(item) {
         return item.id = itemId
         
     })[0]
-   
-    /*
-    let targetItemObj = menuArray.find(obj => obj.id === itemId);
-
-    
-    console.log(targetItemObj) 
-    console.log(itemId) 
     */
+    
+   
+    
+    let targetItemObj = menuArray.find(obj => obj.id === itemId);
+   
+    //console.log(targetItemObj) 
+    //console.log(itemId) 
+
    
 
     
     if (order.includes(targetItemObj)) {
-        order.pop(targetItemObj)
-        /*
+        //order.pop(targetItemObj)
+        
         const index = order.indexOf(targetItemObj);
         order.splice(index, 1);
-        */
+        
         
         totalPrice -= targetItemObj.price
-        //console.log("item price is: " + targetItemObj.price + " total price is: " + totalPrice)
+        console.log("item price is: " + targetItemObj.price + " total price is: " + totalPrice)
         renderOrderSection()
         renderOrderItems()
         
