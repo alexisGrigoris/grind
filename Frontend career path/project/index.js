@@ -12,17 +12,17 @@ document.addEventListener('click', function(e){
 })
 
 function handleAddBtn(itemId) {
-    const test = document.getElementById('test')
     const targetItemObject = menuArray.filter(function(item){
-        return item.id === itemId
-
-    })[0]
-    if (!targetItemObject.price){
+        return item.id === itemId && item.price
+                
+    })
+    if (targetItemObject.price){
         test.innerHTML = `<h1>${itemId}</h1>`
     }
     else{
         test.innerHTML = `<h2> ${itemId} xaxa </h2>`
     }
+    render()
 }
 
 function displayItems(){
