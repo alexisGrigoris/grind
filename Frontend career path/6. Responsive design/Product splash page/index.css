@@ -11,7 +11,7 @@ body {
 h1 {
     font-weight: 400;
     font-size: 2.5rem;
-    text-shadow:0 2px #701f1f;
+    text-shadow:0 2px #404040;
 }
 
 h2{
@@ -28,6 +28,16 @@ p{
 .subheading, .beta-text{
     text-transform: uppercase;
 
+}
+
+
+.top-text {
+    font-size: 0.875rem;
+    font-weight: 900;
+    padding-top: 0.25em;
+    border-top: 5px solid;
+    order:-1;
+    margin:0em auto ;
 }
 
 .beta-text { 
@@ -64,26 +74,26 @@ p{
 /* =================
 Intro
    ================= */
-/* 
-  Challenge: Apply a full background image
-    - Set the background of .intro to the image `intro-bg.png`
-    - The background image should scale to fill the entire
-      width and height of .intro while preserving its ratio
-*/
+
 
 .intro { 
     background: #86bda8 url('images/hasbi.png');
     background-size: cover;
-    justify-content: center;
+    justify-content: space-between  ;
     min-height: 250px;
     text-align: center;
     color: #fff;
+    padding-bottom: 1.5em;
 }
 
 /* ====================
     Main content
    ==================== */
    
+.main-content p,
+form {
+    max-width: 450px;
+}
 
 
 .main-content {
@@ -101,18 +111,6 @@ Intro
 /* =================
     Form
    ================= */
-
-
-/* 
-  Challenge: Style the submit button
-    - The button should have the same font-family, width
-      and border-radius of the input elements
-    - Use the .btn selector to set the custom button styles;
-      use the slide as a guide
-    - Button colors:
-      - Background: #8a71ec
-      - Background on hover: #b7a7f6
-*/
 
 .btn, input{
     border-radius: 5px;
@@ -153,13 +151,6 @@ input:focus {
     color: #86bda8;
     background-color: #e6e8ec;
   }
-/* 
-  Challenge: Style the form inputs
-    - Give the inputs a solid 2px border using the value #d1d5db
-    - Round the corners of the input fields by 5px
-    - On focus, update an input’s border color to #8a71ec
-      and background color to #e6e8ec
-*/
 
 /* =================
     Media queries 
