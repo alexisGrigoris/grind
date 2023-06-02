@@ -20,16 +20,16 @@ h2{
 }
 
 p{
-    /* 
-  Challenge: Set the initial styles for text
-    - Set the paragraph to a relative font-size value equal to 18px
-    - Set the p line-height to 1.35 times its font-size value
-    - Give .subheading a bottom margin in em equal to half its font-size value
-*/
- font-size: 1.125rem;
- line-height: 1.35;
+    font-size: 1.125rem;
+    line-height: 1.35;
 
 }
+
+.subheading, .beta-text{
+    text-transform: uppercase;
+
+}
+
 .beta-text { 
     font-weight: 900;
 
@@ -41,10 +41,14 @@ p{
     margin-bottom: 0.5em;
 
 }
-.subheading, .beta-text{
-    text-transform: uppercase;
 
+.fine-print {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #858585;
 }
+
+
 /* =================
     Flex containers
    ================= */
@@ -60,13 +64,20 @@ p{
 /* =================
 Intro
    ================= */
+/* 
+  Challenge: Apply a full background image
+    - Set the background of .intro to the image `intro-bg.png`
+    - The background image should scale to fill the entire
+      width and height of .intro while preserving its ratio
+*/
 
 .intro { 
+    background: #86bda8 url('images/hasbi.png');
+    background-size: cover;
     justify-content: center;
     min-height: 250px;
     text-align: center;
     color: #fff;
-    background-color: #86bda8;
 }
 
 /* ====================
@@ -90,19 +101,70 @@ Intro
 /* =================
     Form
    ================= */
-   
+
+
+/* 
+  Challenge: Style the submit button
+    - The button should have the same font-family, width
+      and border-radius of the input elements
+    - Use the .btn selector to set the custom button styles;
+      use the slide as a guide
+    - Button colors:
+      - Background: #8a71ec
+      - Background on hover: #b7a7f6
+*/
+
+.btn, input{
+    border-radius: 5px;
+    width: 100%;
+    font-family: inherit;
+
+}
+
+.btn {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 1em 0;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #58a6da;
+    margin-top: 1em;    
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #86bda8;
+}
+
+
+input{
+    margin-bottom: 0.75em;
+    padding: 0.5em;
+    border: 2px solid #d1d5db;
+
+}       
+input:focus {
+    outline: none;
+    color: #86bda8;
+    background-color: #e6e8ec;
+  }
+/* 
+  Challenge: Style the form inputs
+    - Give the inputs a solid 2px border using the value #d1d5db
+    - Round the corners of the input fields by 5px
+    - On focus, update an input’s border color to #8a71ec
+      and background color to #e6e8ec
+*/
 
 /* =================
     Media queries 
    ================= */
-   /* 
-  Challenge: Adjust text for wider screens
-    - In the media query, increase the h1 font-size to
-      a rem value equal to 52px
-    - Increase the h2 font-size to a rem value equal to 42px
-    - Increase the font-size of .beta-text to a 
-      rem value equal to 20px
-*/
+
 @media (min-width:576px){
     body{
         display: flex;
