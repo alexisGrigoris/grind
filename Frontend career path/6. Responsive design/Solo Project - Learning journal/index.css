@@ -21,15 +21,13 @@ html {
   .logo{
     font-size: 1.5rem;
   }  
+
   .nav-links {
     list-style: none;
     display: flex;
-    align-items: baseline;
   }
   
   .nav-item a {
-    display: inline-block;
-    padding: 10px 15px;
     color: black;
   }
   
@@ -75,7 +73,7 @@ header p {
 .croco{
   background-image: url('images/cocodrilo.jpg');
   background-size: contain;
-  border-radius: 1em;
+  border-radius: 0.3em;
   color: white;
 }
 
@@ -83,7 +81,6 @@ header p {
   grid-column: 1/-1;
   text-align: center;
 }
-
 
 .croco-img{
   height: 60%;
@@ -135,3 +132,112 @@ footer{
 .copyright{
   padding: 1em 0;
 }
+
+
+@media (max-width: 600px) {
+
+  /* NAV */
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+ }
+
+  .logo{
+    font-size: 0.8125rem;
+    margin: 0;
+    padding: 0;
+  }  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .nav-item a {
+    color: black;
+    font-size: 0.8rem;
+  }
+    a:hover {
+    color: darkgreen;
+  }
+
+    /* HEADER */
+
+    header{
+      background-image: url('images/cocodrilo.jpg');
+      color:white;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      gap:1em;
+      padding:3em 1em 1em 1em;
+    }
+  
+    header h1{
+      font-size: 1.75rem;
+    }
+  
+  header p {
+    line-height: 1.25;
+  }
+
+    /* MAIN */
+
+.croco-grid{
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1em;
+}
+
+.croco{
+  background-image: url('images/cocodrilo.jpg');
+  background-size: contain;
+  border-radius: 0.3em;
+  color: white;
+}
+
+.croco-title{
+  grid-column: 1/-1;
+  text-align: center;
+}
+
+.croco-img{
+  height: 50%;
+  width: 100%;
+  padding: 1em;
+}
+
+.date{
+  margin-left: 1em;
+  padding-bottom: 1em;
+}
+
+.croco-type{
+  padding: 0 1em;
+  text-align: center;
+}
+
+.croco-info{
+  margin-top: 1em;
+  text-align: center;
+  padding: 1em 1em 5em 1em;
+}
+
+.margin{
+  margin: 1em 0;
+}
+
+a {
+  display: inline-block;
+  padding: 10px 15px;
+  color: black;
+}
+
+a{
+  text-decoration: none;
+}
+
+}
+
