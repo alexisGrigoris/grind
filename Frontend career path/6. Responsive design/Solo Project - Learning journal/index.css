@@ -39,8 +39,6 @@ html {
     color: darkgreen;
   }
   
-
-
   header{
     background-image: url('images/cocodrilo.jpg');
     color:white;
@@ -55,4 +53,50 @@ html {
 
 header p,h1{
     max-width: 750px;
+}
+
+.croco-title{
+  grid-column: 1/-1;
+  text-align: center;
+}
+
+.croco-grid{
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-gap: 1em;
+}
+
+.croco-img{
+  height: 70%;
+  width: 100%;
+  padding: 1em;
+}
+
+.date{
+  margin-left: 1em;
+  padding-bottom: 1em;
+}
+
+.croco-type{
+  padding: 0 1em;
+  text-align: center;
+}
+
+.croco-info{
+  margin-top: 1em;
+  text-align: center;
+  padding: 1em;
+  padding-bottom: 3em;
+}
+
+.croco{
+  background-color: #4e5b47;
+  border-radius: 1em;
+  color: white;
+}
+
+main a {
+  text-decoration: underline;
+  color: black;
 }
