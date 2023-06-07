@@ -9,16 +9,18 @@ html {
     padding: 0;
   }
 
-  
+  /* NAVIGATION BAR */
   nav {
     width: 100%;
     padding: 0.5em 0.5em 0.5em 1.9em;
-
     display: flex;
     justify-content: space-between;
     align-items: baseline; 
  }
-  
+
+  .logo{
+    font-size: 1.5rem;
+  }  
   .nav-links {
     list-style: none;
     display: flex;
@@ -35,10 +37,12 @@ html {
     text-decoration: none;
   }
   
-  .nav-item:hover a {
+  a:hover {
     color: darkgreen;
   }
   
+    /*  HEADER */
+
   header{
     background-image: url('images/cocodrilo.jpg');
     color:white;
@@ -47,7 +51,7 @@ html {
     flex-direction: column;
     gap:1em;
     padding:1em;
-    padding-top: 25em;
+    padding-top: 20em;
   }
 
 
@@ -55,10 +59,11 @@ header p,h1{
     max-width: 750px;
 }
 
-.croco-title{
-  grid-column: 1/-1;
-  text-align: center;
+header p {
+  font-size: 1.125rem;
 }
+
+    /*  MAIN */
 
 .croco-grid{
   padding: 1em;
@@ -67,8 +72,21 @@ header p,h1{
   grid-gap: 1em;
 }
 
+.croco{
+  background-image: url('images/cocodrilo.jpg');
+  background-size: contain;
+  border-radius: 1em;
+  color: white;
+}
+
+.croco-title{
+  grid-column: 1/-1;
+  text-align: center;
+}
+
+
 .croco-img{
-  height: 70%;
+  height: 60%;
   width: 100%;
   padding: 1em;
 }
@@ -86,17 +104,34 @@ header p,h1{
 .croco-info{
   margin-top: 1em;
   text-align: center;
-  padding: 1em;
-  padding-bottom: 3em;
+  padding: 1em 1em 0 1em;
 }
 
-.croco{
-  background-color: #4e5b47;
-  border-radius: 1em;
+.margin{
+  margin: 1em 0;
+}
+
+a {
+  display: inline-block;
+  padding: 10px 15px;
+  color: black;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+
+/*  FOOTER */
+
+
+footer{
+  background-image: url('images/cocodrilo.jpg');
+  padding: 1em 0;
   color: white;
 }
 
-main a {
-  text-decoration: underline;
-  color: black;
+.copyright{
+  padding: 1em 0;
 }
