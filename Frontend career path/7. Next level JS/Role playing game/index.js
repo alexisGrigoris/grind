@@ -1,25 +1,54 @@
-const heroElementId = "hero"
-const heroName = "Wizard"
-const heroAvatar = "images/wizard.png"
-const heroHealth = "60"
-const heroDiceRoll = 6
+/*
+CHALLENGE
+1. Convert our consts into two objects called 
+"monster" and "hero".
+2. Update the renderCharacter() function so that it accepts 
+a single object "data" as its parameter instead of five string/numbers, 
+reducing the number of arguments to pass in from five to one.
+3. Update the template now each variable is coming from "data".
+4. Update the function call.
+*/
+const hero = 
+{ 
+  elementId: "hero", 
+  name : "Wizard",
+  avatar : "images/wizard.png",
+  health : 60,
+  diceRoll : 6,
+  diceCount: 3
 
-const monsterElementId = "monster"
-const monsterName = "Orc"
-const monsterAvatar = "images/orc.png"
-const monsterHealth = "10"
-const monsterDiceRoll = 4
+}
 
-function renderCharacter(elementId, name, avatar, health, diceRoll){
+const monster = 
+{     
+  elementId: "monster", 
+  name : "Orc",
+  avatar : "images/orc.png",
+  health : 10,
+  diceRoll : 4,
+  diceCount: 1
+
+}
+
+
+function renderCharacter(data){
+  const {elementId, name, avatar, health, diceRoll, diceCount} = data
+  
+  let diceHtml = ''
+
+  for ( let i = 0;  i < diceCount; i++) {
+    diceHtml += `<div class="dice">6</div>`
+  }
+
+
   document.getElementById(elementId).innerHTML = 
     `<div class="character-card">
         <h4 class="name"> ${name} </h4>
         <img class="avatar" src="${avatar}"/>
         <p class="health">health: <b> ${health}</b></p>
-        <div class="dice-container"><div class="dice"> ${diceRoll} </div></div>
+        <div class="dice-container">${diceHtml} </div>
     </div>`;   
 }
 
-renderCharacter(heroElementId, heroName, heroAvatar, heroHealth, heroDiceRoll)
-renderCharacter(monsterElementId, monsterName, monsterAvatar, monsterHealth, monsterDiceRoll)
-    
+renderCharacter(hero);
+renderCharacter(monster);
