@@ -28,7 +28,7 @@ function renderCharacter(data) {
 
    
 for (let i = 0; i < diceCount; i++) {
-  diceHtml += `<div class="dice">6</div>`
+  diceHtml += `<div class="dice">${diceRoll[i]}</div>`
 }
   
   document.getElementById(elementId).innerHTML = 
