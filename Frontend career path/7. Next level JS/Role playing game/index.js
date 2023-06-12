@@ -1,5 +1,26 @@
+/*
+Challenge
+1. Create a function called getDiceRollArray that uses a 
+   for loop to return an array of random numbers between 1-6. 
+2  The function should have diceCount as a parameter and the 
+   array it returns should be diceCount length.
+3  For testing purposes, call the function with a diceCount of 
+   3 and log out the result. 
+** check out hint.md for extra help! **
+*/
+
+function getDiceRollArray(diceCount){
+  const newDiceRolls = []
+  for (let i = 0; i < diceCount; i++){
+    newDiceRolls.push(Math.floor(Math.random()*6) +1)
+  }
+  return newDiceRolls
+}
+
+
+
 const hero = {
-  elementId: "hero", 
+  elementId: "hero",
   name: "Wizard",
   avatar: "images/wizard.png",
   health: 60,
@@ -12,34 +33,27 @@ const monster = {
   name: "Orc",
   avatar: "images/orc.png",
   health: 10,
-  diceRoll: [2],
+  diceRoll: [6],
   diceCount: 1
 }
 
+
+
+
 function renderCharacter(data) {
-  const {elementId, name, avatar, health, diceRoll, diceCount } = data;
-  let diceHtml = '';
-
-// CHALLENGE
-// Update this for loop so it uses a value from the 
-// new diceRoll array to render out the dice so the 
-// wizard's dice have values of 3, 1 and 4, and the
-// orc's single dice has a value of 2.
-
-   
-for (let i = 0; i < diceCount; i++) {
-  diceHtml += `<div class="dice">${diceRoll[i]}</div>`
-}
-  
-  document.getElementById(elementId).innerHTML = 
-  `<div class="character-card">
-      <h4 class="name"> ${name} </h4>
-      <img class="avatar" src="${avatar}" />
-      <div class="health">health: <b>${health}</b></div>
-      <div class="dice-container">
-          ${diceHtml}
-      </div>
-  </div>`; 
+  const { elementId, name, avatar, health, diceRoll, diceCount } = data;
+  const diceHtml = diceRoll.map(function(num){
+    return `<div class="dice">${num}</div>`
+  }).join(" ")
+  document.getElementById(elementId).innerHTML =
+      `<div class="character-card">
+          <h4 class="name"> ${name} </h4>
+          <img class="avatar" src="${avatar}" />
+          <div class="health">health: <b> ${health} </b></div>
+          <div class="dice-container">
+              ${diceHtml}
+          </div>
+      </div>`
 }
 
 renderCharacter(hero);
