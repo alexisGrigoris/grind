@@ -26,20 +26,45 @@ const monster = {
   diceCount: 1
 }
 
-function renderCharacter(data) {
-  const { elementId, name, avatar, health, diceCount } = data;
-  const diceHtml = getDiceHtml(diceCount)
+/*
+Challenge
+1. Create a method called getCharacterHtml that performs the 
+   same tasks as our current renderCharacter function.
+2. Create two new instances of Character. One for a hero, 
+   called "wizard", and one for a monster, called "orc". 
+   Render both of them on the page.
+3. Delete both the old renderCharacter function and the two 
+   lines of code at the bottom of the page which invoke that 
+   function.
+*/
 
-  document.getElementById(elementId).innerHTML =
+
+
+function Character(data){
+
+  this.elementId = data.elementId
+  this.name = data.name
+  this.avatar = data.avatar
+  this.health = data.health
+  this.diceCount = data.diceCount
+  this.getCharacterHtml = function() {
+    const { elementId, name, avatar, health, diceCount } = this;
+    const diceHtml = getDiceHtml(diceCount)
+    document.getElementById(elementId).innerHTML =
       `<div class="character-card">
-          <h4 class="name"> ${name} </h4>
-          <img class="avatar" src="${avatar}" />
-          <div class="health">health: <b> ${health} </b></div>
+          <h4 class="name"> ${this.name} </h4>
+          <img class="avatar" src="${this.avatar}" />
+          <div class="health">health: <b> ${this.health} </b></div>
           <div class="dice-container">    
               ${diceHtml}
           </div>
       </div>`;
+  }
+
 }
 
-renderCharacter(hero);
-renderCharacter(monster);
+const manster1 = new Character(monster)
+const hero1 =  new Character(hero)
+manster1.getCharacterHtml()
+hero1.getCharacterHtml()
+
