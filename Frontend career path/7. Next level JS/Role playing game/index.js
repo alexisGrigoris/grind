@@ -4,6 +4,10 @@ function getDiceRollArray(diceCount) {
   })    
 }
 
+// CHALLENGE 
+// 1. Add this function as a method of our character constructor
+// 2. Make a small change to getCharacterHtml to make the app work again
+
 function getDiceHtml(diceCount) {
   return getDiceRollArray(diceCount).map(function(num){ 
       return  `<div class="dice">${num}</div>`
