@@ -4,15 +4,6 @@ function getDiceRollArray(diceCount) {
   })    
 }
 
-// CHALLENGE 
-// 1. Add this function as a method of our character constructor
-// 2. Make a small change to getCharacterHtml to make the app work again
-
-function getDiceHtml(diceCount) {
-  return getDiceRollArray(diceCount).map(function(num){ 
-      return  `<div class="dice">${num}</div>`
-  }).join('')
-}
 
 const hero = {
   elementId: "hero",
@@ -31,23 +22,32 @@ const monster = {
 }
 
 function Character(data){
-
   Object.assign(this, data)
-  this.getCharacterHtml = function() {
-    const { elementId, name, avatar, health, diceCount } = this;
-    const diceHtml = getDiceHtml(diceCount)
-    document.getElementById(elementId).innerHTML =
-      `<div class="character-card">
-          <h4 class="name"> ${this.name} </h4>
-          <img class="avatar" src="${this.avatar}" />
-          <div class="health">health: <b> ${this.health} </b></div>
-          <div class="dice-container">    
-              ${diceHtml}
-          </div>
-      </div>`;
-  }
 
+
+
+  this.getDiceHtml = function (diceCount) {
+    return getDiceRollArray(diceCount).map(function (num) {
+        return `<div class="dice">${num}</div>`
+    }).join('')
 }
+
+this.getCharacterHtml = function () {
+    const { elementId, name, avatar, health, diceCount } = this;
+    let diceHtml = this.getDiceHtml(diceCount);
+
+    document.getElementById(elementId).innerHTML = `
+        <div class="character-card">
+            <h4 class="name"> ${name} </h4>
+            <img class="avatar" src="${avatar}" />
+            <div class="health">health: <b> ${health} </b></div>
+            <div class="dice-container">
+                ${diceHtml}
+            </div>
+        </div>`;
+}
+}
+
 
 const manster1 = new Character(monster)
 const hero1 =  new Character(hero)
