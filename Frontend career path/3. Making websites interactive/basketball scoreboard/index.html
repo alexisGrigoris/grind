@@ -1,31 +1,30 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <div class="container">
-            <div>
-                <h3>HOME</h3>
-                <div class="points">
-                    <h1 class="scorestyle" id="hp"> </h1>
-                </div>
-                    <button onclick="add1()"> + 1 </button>
-                    <button onclick="add2()"> + 2 </button>
-                    <button onclick="add3()"> + 3 </button>
-            </div>
-            <div>
-                <h3>GUEST</h3>
-                <div class="points"> 
-                     <h1 class="scorestyle" id="gp"> </h1>
-                </div>
-                    <button onclick="gadd1()"> + 1 </button>
-                    <button onclick="gadd2()"> + 2 </button>
-                    <button onclick="gadd3()"> + 3 </button>
-            </div>
-            
+  <head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h3>HOME</h3>
+        <div class="points">
+          <h1 class="scorestyle" id="hp"></h1>
         </div>
-        <button onclick="reset()"> New Game </button>
-        <p id = "history"></p>
-        <script src="index.js"></script>
-    </body>
+        <button onclick="add1()">+ 1</button>
+        <button onclick="add2()">+ 2</button>
+        <button onclick="add3()">+ 3</button>
+      </div>
+      <div>
+        <h3>GUEST</h3>
+        <div class="points">
+          <h1 class="scorestyle" id="gp"></h1>
+        </div>
+        <button onclick="gadd1()">+ 1</button>
+        <button onclick="gadd2()">+ 2</button>
+        <button onclick="gadd3()">+ 3</button>
+      </div>
+    </div>
+    <button onclick="reset()">New Game</button>
+    <p id="history"></p>
+    <script src="index.js"></script>
+  </body>
 </html>
