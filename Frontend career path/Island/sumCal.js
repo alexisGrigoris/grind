@@ -1,6 +1,6 @@
-  //GETS DAYS' BUTTONS FEED
+      //GETS DAYS' BUTTONS FEED
       function getDaysBtns() {
-        for (i = 0; i < 13; i++) {
+        for (i = 1; i < 13; i++) {
           document.getElementById(
             "btns-container"
           ).innerHTML += `<!--DAY ${i} -->
@@ -21,7 +21,7 @@
 
 <!--DAY ${i}  LOCKED-->
 
-<div class="locked-ice" id="locked-ice-${i}">
+<div class="locked-ice gentle-hover-shake" id="locked-ice-${i}">
   <div class="locked-ice-no">${i}</div>
 </div>
         `;
@@ -31,7 +31,7 @@
 
       //GETS DAY'S MODAL FEED
       function getDaysModal() {
-        for (i = 0; i < 13; i++) {
+        for (i = 1; i < 13; i++) {
           document.getElementById(
             "modals-container"
           ).innerHTML += `<div class="modal" id="modal${[i]}">
@@ -73,9 +73,73 @@
 
       document.getElementById("btn7").classList.add("glow");
       //MAKES TODAYS MODAL ACTIVE
-      if (document.getElementById("btn1").textContent < new Date().getDate()) {
-        document.getElementById("btn1").style.display = "none";
+      function getExpiredBtns() {
+        for (i = 1; i < 13; i++) {
+          if (
+            document.getElementById("btn" + [i]).textContent <
+            new Date().getDate()
+          ) {
+            document.getElementById("btn" + [i]).style.display = "none";
+            document.getElementById("locked-ice-" + [i]).style.display = "none";
+            document.getElementById("btn-expired-" + [i]).style.display =
+              "block";
+          }
+        }
       }
+
+      function getActiveBtns() {
+        for (i = 1; i < 13; i++) {
+          if (
+            document.getElementById("btn" + [i]).textContent ==
+            new Date().getDate()
+          ) {
+            document.getElementById("btn" + [i]).style.display = "block";
+            document.getElementById("btn" + [i]).classList.add("glow");
+            document.getElementById("locked-ice-" + [i]).style.display = "none";
+            document.getElementById("btn-expired-" + [i]).style.display =
+              "none";
+          }
+        }
+      }
+
+      function getNextDaysBtn() {
+        for (i = 1; i < 13; i++) {
+          if (
+            parseInt(document.getElementById("btn" + [i]).textContent) - 1 ==
+            new Date().getDate()
+          ) {
+            document.getElementById("btn" + [i]).style.display = "block";
+            document.getElementById("locked-ice-" + [i]).style.display = "none";
+            document.getElementById("btn-expired-" + [i]).style.display =
+              "none";
+          }
+        }
+      }
+
+      function getLockedBtns() {
+        for (i = 1; i < 13; i++) {
+          if (
+            parseInt(document.getElementById("btn" + [i]).textContent) - 1 >
+            new Date().getDate()
+          ) {
+            document.getElementById("btn" + [i]).style.display = "none";
+            document.getElementById("locked-ice-" + [i]).style.display =
+              "block";
+            document.getElementById("btn-expired-" + [i]).style.display =
+              "none";
+          }
+        }
+      }
+
+      getExpiredBtns();
+      getActiveBtns();
+      getNextDaysBtn();
+      getLockedBtns();
+      /*   
+      
+      if (parseInt(document.getElementById("btn1").textContent) + 3 == new Date().getDate()) {
+        document.getElementById("btn1").style.display = "block";
+      } */
 
       if (document.getElementById("btn4").textContent < new Date().getDate()) {
         document.getElementById("btn4").style.display = "none";
@@ -83,52 +147,105 @@
       }
 
       /*       DISPLAY MODAL      */
+      /* DAY 4 */
+      document.getElementById("btn4").addEventListener("click", function () {
+        document.getElementById("modal4").style.display = "block";
+        document.getElementById("island").classList.add("blur");
+        document.getElementById("sum-cal").classList.add("no-scroll");
+      });
+      document
+        .getElementById("modal-close-btn4")
+        .addEventListener("click", function () {
+          document.getElementById("modal4").style.display = "none";
+          document.getElementById("island").classList.remove("blur");
+          document.body.classList.remove("no-scroll");
+        });
+
+      /* DAY 5 */
+      document.getElementById("btn5").addEventListener("click", function () {
+        document.getElementById("modal5").style.display = "block";
+        document.getElementById("island").classList.add("blur");
+        document.body.classList.add("no-scroll");
+      });
+      document
+        .getElementById("modal-close-btn5")
+        .addEventListener("click", function () {
+          document.getElementById("modal5").style.display = "none";
+          document.getElementById("island").classList.remove("blur");
+          document.body.classList.remove("no-scroll");
+        });
+
+      /* DAY 6 */
+      document.getElementById("btn6").addEventListener("click", function () {
+        document.getElementById("modal6").style.display = "block";
+        document.getElementById("island").classList.add("blur");
+        document.body.classList.add("no-scroll");
+      });
+      document
+        .getElementById("modal-close-btn6")
+        .addEventListener("click", function () {
+          document.getElementById("modal6").style.display = "none";
+          document.getElementById("island").classList.remove("blur");
+          document.body.classList.remove("no-scroll");
+        });
+
       /* DAY 7 */
       document.getElementById("btn7").addEventListener("click", function () {
         document.getElementById("modal7").style.display = "block";
         document.getElementById("island").classList.add("blur");
-        document.body.classList.add("stop-scrolling");
+        document.getElementById("sum-cal").classList.add("no-scroll");
       });
       document
         .getElementById("modal-close-btn7")
         .addEventListener("click", function () {
           document.getElementById("modal7").style.display = "none";
           document.getElementById("island").classList.remove("blur");
-          document.body.classList.remove("stop-scrolling");
+          document.body.classList.remove("no-scroll");
         });
 
       /* DAY 8 */
       document.getElementById("btn8").addEventListener("click", function () {
         document.getElementById("modal8").style.display = "block";
         document.getElementById("island").classList.add("blur");
-        document.body.classList.add("stop-scrolling");
+        document.body.classList.add("no-scroll");
       });
       document
         .getElementById("modal-close-btn8")
         .addEventListener("click", function () {
           document.getElementById("modal8").style.display = "none";
           document.getElementById("island").classList.remove("blur");
-          document.body.classList.remove("stop-scrolling");
+          document.body.classList.remove("no-scroll");
         });
 
       /* ACCORDION */
 
       for (
-        let i = 0;
-        i < document.getElementsByClassName("accordion").length;
+        let i = 1;
+        i <= document.getElementsByClassName("accordion").length;
         i++
       ) {
         document
-          .getElementsByClassName("accordion")
-          [i].addEventListener("click", function () {
+          .getElementById("accordion")
+          .addEventListener("click", function () {
+            
+
             if (document.getElementById("panel").style.display === "block") {
               document.getElementById("accordion").innerHTML =
                 "<div class='oroi-title'>▶ Όροι & Προϋποθέσεις</div>";
               document.getElementById("panel").style.display = "none";
             } else {
               document.getElementById("accordion").innerHTML =
-                "<div class='oroi-title'> ▼ Όροι & Προϋποθέσεις</div>";
+                "<div class='oroi-title'>▼ Όροι & Προϋποθέσεις</div>";
               document.getElementById("panel").style.display = "block";
             }
           });
       }
+
+      window.onclick = function (event) {
+        for (i = 1; i < 13; i++) {
+          if (event.target == document.getElementById("modal" + [i])) {
+            document.getElementById("modal" + [i]).style.display = "none";
+            document.getElementById("island").classList.remove("blur");
+          }
+        }
+      };
