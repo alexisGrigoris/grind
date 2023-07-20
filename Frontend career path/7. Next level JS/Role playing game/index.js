@@ -45,15 +45,7 @@ function Character(data) {
     }  
 }
 
-//CHALLENGE
-// - Make the wizard and orc render
-// - check hint.md if you need a hand 
 
-
-/* MINI CHALLENGE */
-// 1 Create one render() function that calls both wizard and orc 
-//  so we can control when they render. 
-// 2 call the function.
 const wizard = new Character(hero)
 const orc = new Character(monster)
 
