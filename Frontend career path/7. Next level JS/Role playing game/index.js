@@ -6,7 +6,7 @@ function getDiceRollArray(diceCount) {
 
 const hero = {
     elementId: "hero",
-    name: "Wizard",
+    name: "Reus",
     avatar: "images/wizard.png",
     health: 60,
     diceCount: 3
@@ -14,7 +14,7 @@ const hero = {
 
 const monster = {
     elementId: "monster",
-    name: "Orc",
+    name: "Caliguiri",
     avatar: "images/orc.png",
     health: 10,
     diceCount: 1
