@@ -18,6 +18,16 @@ html {
     align-items: baseline; 
  }
 
+ span{
+ 
+  font-size: 1.6rem;
+  color: rgb(255, 255, 255);
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+
+ }
+
   .logo{
     font-size: 1.5rem;
   }  
