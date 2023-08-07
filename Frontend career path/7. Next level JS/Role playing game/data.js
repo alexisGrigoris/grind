@@ -1,6 +1,5 @@
 const characterData = {
     hero: {
-        elementId: "hero",
         name: "Wizard",
         avatar: "images/wizard.png",
         health: 60,
