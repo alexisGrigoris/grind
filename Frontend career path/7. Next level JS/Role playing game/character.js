@@ -1,18 +1,14 @@
 import {getDiceRollArray, getDicePlaceholderHtml} from './utils.js'
 
-
 /*
-CHALLENGE
-1. In the Character constructor, create a new 
-property called "diceArray".
-2. Set diceArray equal to whatever is returned
-by the getDicePlaceholderHtml function (think 
-what two things you need to do to make this work!!).
-3. Instead of rendering diceHtml in the getCharacterHtml 
-method, render diceArray.
-4. Delete any unnecessary code.
+Challenge
+1. In the getDiceHtml method, map over currentDiceScore 
+to return this string of html template for each element:
+<div class="dice">${num}</div>`. Save this new array
+to diceArray.
+2. Modify the attack() function in index.js to get our 
+app working again.
 */
-
 
 function Character(data) {
     Object.assign(this, data)
@@ -20,13 +16,11 @@ function Character(data) {
     this.diceArray = getDicePlaceholderHtml(this.diceCount)
     
     this.getDiceHtml = function(diceCount) {
-        return getDiceRollArray(diceCount).map(function(num){ 
-            return  `<div class="dice">${num}</div>`
-        }).join('')
+        this.currrentDiceScore = getDiceRollArray(this.diceCount).map(this.currrentDiceScore)
     }
 
     this.getCharacterHtml = function () {
-        const { elementId, name, avatar, health, diceCount, diceArray } = this;      
+        const { name, avatar, health, diceCount, diceArray } = this;      
         let diceHtml = this.getDiceHtml(diceCount);
         
            return `
