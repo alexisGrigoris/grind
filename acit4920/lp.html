@@ -1,0 +1,439 @@
+<style>
+  .TextPageWrapper {
+    background-color: #161615;
+    background-size: cover;
+  }
+  .FullWidthPage {
+    padding: 0;
+  }
+  .SectionContent {
+    padding-bottom: 0px;
+    padding-top: 0px !important;
+  }
+  .main_body {
+    color: rgb(255, 255, 255);
+    background-color: #161615;
+    margin: 0;
+  } /*LAPTOP/PC*/
+  .hero-section {
+    background-image: url("https://intranet-wm.s3.eu-central-1.amazonaws.com/resources/img/spinday-lp-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    position: relative;
+  }
+  .overlay {
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .content {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .heading {
+    z-index: 2;
+    width: 45%;
+    padding: 10px;
+    color: white;
+    word-wrap: break-word;
+    font-family: Impact !important;
+  }
+  .heading h1,
+  h2,
+  h3 {
+    text-align: right;
+  }
+  #title {
+    font-size: 50px;
+    text-align: right;
+  }
+  .heading h1 {
+    font-size: 50px !important;
+    font-weight: 500;
+    line-height: 75px;
+    letter-spacing: 0.9;
+  }
+  .subheading {
+    font-weight: 400;
+  }
+  .heading h3 {
+    font-size: 15px;
+    font-family: Roboto !important;
+    font-weight: 700;
+  }
+  .cta-container {
+    text-align: right;
+    padding: 10px;
+  }
+  .cta-button {
+    color: white;
+    background-color: #ec1c24;
+    border: none;
+    border-radius: 46px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    font-family: Roboto !important;
+    font-size: 20px !important;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: auto;
+    padding: 15px 30px;
+    animation: flicker 1300ms infinite;
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+  .cta-button:hover {
+    transform: scale(1.1);
+  }
+  @keyframes flicker {
+    0% {
+      background-color: #d21820;
+      box-shadow: 0 0 3px #d21820;
+    }
+    50% {
+      background-color: #f91c24;
+      box-shadow: 0 0 10px #f91c24;
+    }
+    100% {
+      background-color: #d21820;
+      box-shadow: 0 0 3px #d21820;
+    }
+  }
+  .fg-img {
+    z-index: 2;
+    width: 55%;
+    padding: 10px;
+    text-align: center;
+  }
+  .fg {
+    margin: auto;
+    max-width: 80% !important;
+    transition: transform 0.5s ease;
+  }
+  .fg:hover {
+    transform: scale(1.1);
+  }
+  .fg-img > h3 {
+    display: none;
+  }
+  .row {
+    display: flex;
+    background-color: #161615;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 11px 0px 11px;
+  }
+  .box {
+    width: 33.33%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+  }
+  .cont {
+    width: 79.998%;
+  }
+  .icon {
+    width: 50px;
+    margin-right: 20px;
+  }
+  .step_title {
+    margin-top: -6px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 25px;
+    line-height: 1.8;
+    width: 90%;
+    font-family: Roboto !important;
+    position: relative;
+    display: inline-block;
+  }
+  .step_title::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 20%;
+    border-bottom: 2px solid rgb(255, 0, 0);
+  }
+  .description {
+    color: #f1f1f1;
+    font-size: 15px;
+    font-family: Roboto;
+  } /* Terms & Conditions */
+  .terms {
+    width: 65%;
+    margin: 2em auto 1em auto;
+  }
+  .terms p {
+    display: none;
+  }
+  .accordion {
+    background-color: #eee;
+    color: #000000;
+    cursor: pointer;
+    padding-left: 10px;
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+    text-align: left;
+    font-size: 13px;
+    transition: 0.4s;
+    text-decoration: underline;
+  }
+  .active,
+  .accordion:hover {
+    background-color: #ccc;
+  }
+  .panel {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(255, 255, 255);
+    max-height: 0;
+    font-size: 16px;
+    font-family: Arial !important;
+    overflow: hidden;
+    color: black;
+    line-height: 1.8em;
+    transition: max-height 0.6s ease-out;
+  }
+  #arrow {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 15px !important;
+  } /*MOBILE*/
+  @media (max-width: 767px) {
+    .hero-section {
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 0;
+      position: relative;
+      height: auto;
+    }
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .heading {
+      width: 100%;
+    }
+    #title {
+      font-size: 30px;
+      text-align: center;
+      margin-top: -1em;
+      margin-bottom: 1em;
+    }
+    .heading h1 {
+      font-size: 32px;
+      line-height: 1.3em;
+      letter-spacing: 1px;
+    }
+    .heading h1,
+    h2 {
+      text-align: center;
+    }
+    .heading > h3 {
+      display: none;
+    }
+    .cta-container {
+      text-align: center;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-bottom: 10px;
+    }
+    .cta-button {
+      width: 100%;
+    }
+    .fg-img > h3 {
+      display: block;
+      text-align: center;
+      font-size: 15px;
+      font-family: Roboto !important;
+      font-weight: 700;
+      color: white;
+    }
+    .fg-img {
+      width: 100%;
+      font-size: 222em;
+      padding: 10px;
+      text-align: center;
+    }
+    .fg {
+      max-width: 85% !important;
+      margin: auto;
+    }
+    .disclaimer {
+      display: block;
+      font-size: 9px;
+      font-weight: 700;
+      text-align: center;
+      color: white;
+    } /* AG */
+    .terms {
+      width: 90%;
+      margin: 2em auto 1em auto;
+    }
+    .row {
+      flex-direction: column;
+    }
+    .box {
+      width: 100%;
+    }
+  }
+</style>
+<main class="main_body">
+  <div class="hero-section">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="heading">
+        <div id="title">
+          5 free spins για όλους <br />
+          + 95 free spins <br />
+          για νέα μέλη
+        </div>
+        <div class="cta-container">
+          <a href="/el/spinday/#registerr"
+            ><button class="cta-button" type="button">Κάνε εγγραφή</button></a
+          >
+        </div>
+      </div>
+      <div class="fg-img">
+        <a href="/el/spinday/#register">
+          <img
+            class="fg"
+            alt="logo"
+            src="https://intranet-wm.s3.eu-central-1.amazonaws.com/resources/img/spinday-lp-fg.png"
+        /></a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="box">
+      <img
+        src="https://intranet-wm.s3.eu-central-1.amazonaws.com/resources/img/1.png"
+        alt="Icon 1"
+        class="icon"
+      />
+      <div class="cont">
+        <div class="step_title">5 free spins</div>
+        <div class="description">
+          Θα γίνουν δικά σου απλά και γρήγορα μόλις μπεις στον λογαριασμό σου
+          και στο δεις πώς θα τα παίξεις στο φρουτάκι Golden Glyph της
+          Quickspin.
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <img
+        src="https://intranet-wm.s3.eu-central-1.amazonaws.com/resources/img/step2_150.png"
+        alt="Icon 2"
+        class="icon"
+      />
+      <div>
+        <div class="step_title">45 free spins</div>
+        <div class="description">
+          Είναι νέο μέλος; Κάνε ταυτοποίηση του λογαριασμού σου, βάλε κωδικό
+          SUNDAY-45 σε περιμένουν στο παιχνίδι Animal instinct της Playtech.
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <img
+        src="https://intranet-wm.s3.eu-central-1.amazonaws.com/resources/img/step3_150.png"
+        alt="Icon 3"
+        class="icon"
+      />
+      <div>
+        <div class="step_title">50 free spins</div>
+        <div class="description">
+          Κάνεις πρώτη κατάθεση αξίας 10€, βάζεις κωδικό SUNDAY-50 και λαμβάνεις
+          επιπλέον 50 free spins στο Animal instinct για να συνεχίσεις το
+          παιχνίδι.
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="terms">
+    <button class="accordion">
+      <p id="arrow">
+        ▶ <strong><u> Όροι και Προϋποθέσεις</u></strong>
+      </p>
+    </button>
+    <div id="panel" class="panel">
+      <div><strong>5 Free spins για όλους</strong></div>
+      <ol class="wm-pl-2 wm-ol">
+        <li>Η προσφορά είναι διαθέσιμη για όλα τα μέλη της winmasters.gr.</li>
+        <li>
+          Η προσφορά είναι ενεργή την Κυριακή 10/9 από τις 00:01 έως τις 23:59
+          ώρα Ελλάδος.
+        </li>
+        <li>Οι δωρεάν περιστροφές θα είναι διαθέσιμες στο Golden Glyph 3.</li>
+        <li>
+          Οι δωρεάν περιστροφές θα είναι διαθέσιμες για μία (1) ημέρα από την
+          απόδοσή τους.
+        </li>
+        <li>
+          Τα μέγιστα κέρδη που μπορείτε να λάβετε από τις δωρεάν περιστροφές
+          είναι τριακόσια ευρώ (300€). Κέρδη άνω του μέγιστου ποσού που προήλθαν
+          από τις δωρεάν περιστροφές θα αφαιρούνται.
+        </li>
+        <li>
+          Για να είναι επιλέξιμο το μέλος θα πρέπει να επιλέξει την προσφορά
+          πατώντας το κουμπί «Το Θέλω» στην προσφορά.
+        </li>
+        <li>Ισχύουν Γενικοί Όροι Μπόνους της winmasters.</li>
+      </ol>
+      <div><strong>45 free sins για νέα μέλη</strong></div>
+      <ol class="wm-pl-2 wm-ol" start="8">
+        <li>
+          Τα μέλη της winmasters που θα εγγραφούν την Κυριακή 10/9 θα λάβουν 45
+          δωρεάν περιστροφές (free spins) στο παιχνίδι slot Animal instinct της
+          Playtech. ακολουθώντας τα παρακάτω βήματα:
+        </li>
+        <ul class="wm-pl-2 wm-ul">
+          <li>Ολοκλήρωση της διαδικασίας ταυτοποίησης.</li>
+          <li>
+            Εισάγοντας τον Κωδικό SUNDAY-45 στο πεδίο «Έχεις κωδικό μπόνους;»
+            στην ενότητα «Ο Λογαριασμός μου – Πληροφορίες Μπόνους».
+          </li>
+        </ul>
+        <li>
+          Τα 45 free spins θα είναι διαθέσιμα για 7 ημέρες μετά την ενεργοποίηση
+          τους με την αξία του εκάστοτε free spin να ορίζεται στα 0,10€.
+        </li>
+        <li>
+          Τυχόν κέρδη που προκύπτουν από τη χρήση των free Spins δεν έχουν
+          απαιτήσεις στοιχηματισμού.
+        </li>
+        <li>
+          Σημειώνεται ότι το μέγιστο κέρδος που μπορεί να λάβει κάποιος από τα
+          45
+        </li>
+      </ol>
+      <div><strong>50 free spins με πρώτη κατάθεση</strong></div>
+      <ol class="wm-pl-2 wm-ol" start="12">
+        <li>Τα νέα μέλη έχουν το δικαίωμα για επιπλέον 50 free spins στο παιχνίδι Animal instinct προχωρώντας σε μια πρώτη κατάθεση ελάχιστης αξίας 10€.</li> 
+<li>Τα επιπλέον free spins θα πιστωθούν στο λογαριασμό ενός παίκτη αμέσως μετά την κατάθεση του ποσού και εφόσον προηγουμένως έχουν τοποθετήσει τον κωδικό SUNDAY-50 στο σχετικό πεδίο κατάθεσης.</li> 
+<li>Τα 50 free spins θα είναι διαθέσιμα για 7 ημέρες μετά την ενεργοποίησή τους, με την αξία του εκάστοτε free spin να ορίζεται στα 0,10€.</li> 
+<li>Τυχόν κέρδη που προκύπτουν από τη χρήση και αυτών των free spins δεν έχουν απαιτήσεις στοιχηματισμού.</li> 
+<li>Σημειώνεται ότι το μέγιστο κέρδος που μπορεί να λάβει κάποιος από τα 50 free spins ορίζεται στο ποσό των 250 ευρώ. Κέρδη άνω του ποσού αυτού θα αφαιρούνται.</li> 
+        </ol>
+
+    </div>
+  </section>
+</main>
+<script src="https://intranet-wm.s3.eu-central-1.amazonaws.com/resources/js/lp_script.js"></script>
