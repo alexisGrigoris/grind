@@ -15,6 +15,5 @@ it as the innerHTML of another element on the DOM)
 fetch("https://dog.ceo/api/breeds/image/random")
     .then(response => response.json())
     .then(data => {
-        document.getElementById("image-container").innerHTML = `
-        <img src="${data.message}">`
-    })
+       
+    })              
