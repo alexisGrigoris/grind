@@ -1,15 +1,26 @@
 /**
-Challenge: 
+ Challenge:
 
-Fetch a list of todos from the JSON Placeholder API:
+ With the 5 blog post objects, display the `title` and `body`
+properties of the first 5 posts on the browser page.
+ 
+ Hints: 
+ * Create a `div` in the HTML file to store these items
+ * Loop over the items creating a string of HTML elements you 
+   can then put into the div with `innerHTML`
+ */
 
-BaseURL: https://apis.scrimba.com/jsonplaceholder/
-Endpoint: /todos
 
-This time however, explicitly set the request method to "GET"
-console.log the results
-*/
-
-fetch("https://apis.scrimba.com/jsonplaceholder/todos", {method: "GET"})
+fetch("https://apis.scrimba.com/jsonplaceholder/posts", {method: "GET"})
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => {
+        const postsArr = data.slice(0,5)
+        let html = ""
+        for(let post of postsArr){
+            html += `<h2>${post.title} </h2>
+                    <p>${post.body} </p>
+                    <hr>
+            `
+        }
+        document.getElementById('cont').innerHTML = html
+    })
