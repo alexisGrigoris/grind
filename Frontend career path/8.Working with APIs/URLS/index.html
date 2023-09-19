@@ -12,7 +12,14 @@
         <nav>
             <h3>BlogSpace</h3>
         </nav>
-        <div id ="cont"></div>
+        <form>
+            <label for="post-title">Title:</label>
+            <input id="post-title" type="text" />
+            <label for="post-body">Body:</label>
+            <textarea id="post-body"></textarea>
+            <button type="submit" id="post-btn"> Post</button>
+        </form>
+        <div id="blog-list"></div>
         <script src="index.js"></script>
     </body>
 </html>
