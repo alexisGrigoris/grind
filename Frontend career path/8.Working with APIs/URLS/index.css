@@ -5,7 +5,7 @@ body {
 }
 
 nav {
-    background-color: beige;
+    background-color: rgb(231, 231, 141);
     padding: 5px;
     height: 30px;
     display: flex;
@@ -25,7 +25,7 @@ nav > h3 {
 form {
     padding: 60px 10px 10px;
     display: grid;
-    background-color: lightblue;
+    background-color: rgb(255, 231, 137);
 }
 
 input#post-title, textarea#post-body {
